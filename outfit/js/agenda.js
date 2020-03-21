@@ -9,7 +9,7 @@ let toggleButtonsTopOffset = document.querySelector('section.syllabus').offsetTo
 
 var hours_per_day = 4;
 themes.shown = true;
-subThemes.shown = true;
+subThemes.shown = false;
 
 window.onload = function(){
     init();
@@ -21,7 +21,7 @@ function init(){
     calcTotalHours();
     calcTotalDays();
     // hideAllNodes(themes);
-    // hideAllNodes(subThemes);
+    subThemes.shown || hideAllNodes(subThemes);
     // showAllNodes(subThemes);
 
     if (document.documentElement.clientWidth > 700) {
