@@ -80,7 +80,7 @@ function attachEvents(){
 function setThemeURL(){
     // wrap H3 text into link, with href == section.id path
         // <h3 data-wip>__themeTitle__</h3> =>
-        // <h3><a title="slides" href="/ProgressBG-MLwithPython-Slides/pages/themes/__themeTitle__/__themeTitle__.html">__themeTitle__</a></h3>
+        // <h3><a title="slides" href="/Ind-MLwithPython-Slides/pages/themes/__themeTitle__/__themeTitle__.html">__themeTitle__</a></h3>
 
     for (let i = 0, len = themes.length; i < len ; i++){
         // do not set link for elements in WIP mode:
@@ -97,7 +97,7 @@ function setThemeURL(){
         // create link node:
         let aNode = document.createElement('a');
         aNode.setAttribute("title", "slides");
-        aNode.href = `/ProgressBG-MLwithPython-Slides/pages/themes/${themeTitle}/${themeTitle}.html`;
+        aNode.href = `/Ind-MLwithPython-Slides/pages/themes/${themeTitle}/${themeTitle}.html`;
         aNode.innerHTML = h3_content;
 
         // append it into h3 node
@@ -107,7 +107,7 @@ function setThemeURL(){
 }
 
 function setThemeHours(){
-    // insert <span class=hours> after each h3 in each section:    
+    // insert <span class=hours> after each h3 in each section:
     for(let i=0, len=themes.length; i<len; i++){
         // get themes hours from "data-hours" attribute:
         let hours = themes[i].getAttribute("data-hours");
@@ -203,7 +203,7 @@ function showHideAll( clicked_node, effected_nodes ){
 function showAllNodes ( effected_nodes){
     for (var i = 0; i < effected_nodes.length; i++) {
         showNode(effected_nodes[i]);
-    };    
+    };
 }
 function hideAllNodes ( effected_nodes){
     for (var i = 0; i < effected_nodes.length; i++) {
