@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>strings_and_list_manipulations</title>
+  <link rel="shortcut icon" href="/Ind-MLwithPython-Slides/favicon.ico">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <!-- css & themes include -->
+  <link rel="stylesheet" href="/Ind-MLwithPython-Slides/lib/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="/Ind-MLwithPython-Slides/outfit/css/themes/projector.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '/Ind-MLwithPython-Slides/lib/reveal.js/css/print/pdf.css' : '/Ind-MLwithPython-Slides/lib/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <!-- CUSTOM -->
+  <base target="_blank">
+</head>
+<body>
+  <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+    <div class="top_links">
+      <a class="home_link" href="/Ind-MLwithPython-Slides/index.html#strings_and_list_manipulations" target="_top"><i class="fa fa-home"></i></a>
+      <span class="help_link" href="#"><i class="fa fa-question"></i></span>
+      <div class="help_text">
+        <div><span>N/Space</span><span>Next Slide</span></div>
+        <div><span>P</span><span>Previous Slide</span></div>
+        <div><span>O</span><span>Slides Overview</span></div>
+        <div><span>ctrl+left click</span><span>Zoom Element</span></div>
+      </div>
+    </div>
+    <div class="footer theme_switch">
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/dark.css'); return false;">Dark</a>
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/light.css'); return false;">Light</a>
+      <a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/projector.css'); return false;">Projector</a>
+    </div>
+    <div class="slides">
+<!--
+########################################################
+##################### SLIDES START #####################
+########################################################
+-->
+<section data-min-total="160"><h1>Strings and List manipulations</h1></section>
+<section class="copyright" data-transition="zoom">
+  <section >
+    <div class="note">
+      <p>Created for</p>
+    </div>
+    <div class="company">
+      <a href="http://progressbg.net/kurs-po-web-design/">
+      <img style="height:80%" src="/Ind-MLwithPython-Slides/outfit/images/logos/ProgressBG_logo_529_127.png">
+      </a>
+    </div>
+  </section>
+  <section>
+    <div class="note">
+      <p>Created by</p>
+    </div>
+    <div class="company">
+      <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+    </div>
+    <div class="author">
+      <span>2019,</span>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+    </div>
+  </section>
+</section>
+
+
+<section data-min="5"><h1>Basic IO</h1></section>
+<section><h2>Basic IO</h2>
+  <section><h3>Python3 print() function</h3>
+    <dl class="fa">
+      <dt style="font-size: .8em"><code>print()</code> is used to output <span class="note">text streams</span> to stdout or other text files (working with files will be discussed deeply in next lectures)</dt>
+    </dl>
+    <pre><code rel="Syntax" class="python">
+      print(*objects, sep=' ', end='\n',file=sys.stdout, flush=False)
+    </code></pre>
+    <dl class="fa">
+         <dt><span class="note">*objects</span> - one or more objects, like numbers, string, list...</dt>
+         <dt><span class="note">sep</span> - a string which will be used to separate the objects.<br><span>default is '&nbsp;&nbsp;' (space)</span></dt>
+         <dt><span class="note">end</span> - a string which will be printed at the end (EOL).<br><span>default is '\n' (line feed)</span></dt>
+
+       </dl>
+  </section>
+  <section><h3>Python3 print() function - examples</h3>
+    <pre><code rel="Python3" class="python">
+      >>> print("Hello")
+      >>> print("World")
+      >>> print(1,2,3)
+
+      >>> print(1,2,3,sep="-")
+
+      >>> print("Hello",end="")
+      >>> print("World")
+    </code></pre>
+    <pre><code rel="Output" class="bash">
+        Hello
+        World
+        1 2 3
+        1-2-3
+        HelloWorld
+    </code></pre>
+  </section>
+  <section><h3>Python3 input() function</h3>
+    <p>Prompts the user to enter some value.</p>
+    <pre><code rel="Syntax" class="python">
+      variable = input("prompt message, to be displayed to the user: ")
+    </code></pre>
+    <dl class="fa">
+      <dt>The prompt message, if given, will be printed to the standard output</dt>
+      <dt>The input function returns, as string, whatever the user has entered.</dt>
+    </dl>
+
+    <p class="note">Note, that no matter what value the user entered, it will be stored as a string!</p>
+  </section>
+  <section><h3>Python 3 input() function - examples</h3>
+    <pre><code rel="Python3" class="python">
+      >>> answer = input("Tell me the answer: ")
+      Tell me the answer: # user enters 42 and Enter
+
+      >>> print('The answer is: ', answer)
+      The answer is:  42
+
+      >>> print(type(user_input))
+      &lt;class 'str'&gt;
+    </code></pre>
+  </section>
+  <section><h3>Examples (python3)</h3>
+    <pre><code rel="Python" class="python">
+      user_name = input("hi, what's your name: ")
+      user_surname = input("will you tell me your sur name?:")
+
+      print("Nice to meet you, ", user_name.capitalize() + " " + user_surname.capitalize() + "!")
+    </code></pre>
+    <p class="note">please note, that using concatenation operation for strings containing variables values, is not the <b>pythonic way</b>! Next slides will illustrate the proper way to do it</p>
+  </section>
+</section>
+
+
+<section data-min="20"><h1>Formatted strings</h1></section>
+<section><h2>Formatted strings</h2>
+  <section><h3>Why and How?</h3>
+    <dl class="fa">
+      <dt>It is not convenient to use the concatenation operator when we want to display some message and some variables interpolated into it.</dt>
+      <dt>Python <span class="note">do not support variables interpolation in double quoted strings</span> like in bash/Perl/PHP/...</dt>
+      <pre><code rel="Terminal" class="shell">
+        # not possible in Python!!!
+        $name = "Ada";
+        print("Hello $name !")
+          Hello Ada !
+      </code></pre>
+      <dt>But Python 3  offers the <code>str.format()</code> method, and from Python 3.6 the <code>f-string</code> syntax is introduced.</dt>
+    </dl>
+  </section>
+  <section><h3><code>str.format()</code> - syntax</h3>
+    <pre><code rel="Syntax" class="shell">
+      "string_with_placeholders".format(values_to_be_substituted)
+    </code></pre>
+    <dl class="fa">
+      <dt><span class="note">string_with_placeholders</span> is a string containing placeholders of the form <code>{}</code></dt>
+      <dt><span class="note">values_to_be_substituted</span> - a comma separated list of values, which will be replaced in the respective placeholders</dt>
+      <dt>Reference: <a href="https://docs.python.org/3/library/string.html#format-string-syntax">Format String Syntax</a> @python docs</dt>
+    </dl>
+    <pre><code rel="Example" class="python">
+      >>> "{} died in {} year".format("Ada Byron", 1852)
+      'Ada Byron died in 1852 year'
+    </code></pre>
+  </section>
+  <section><h3><code>str.format()</code> - placeholders</h3>
+    <dl class="fa">
+      <dt>You can give in placeholders an explicit positional index (<span class="note">counting starts from 0</span>), which allows values to be printed in desired order</dt>
+    </dl><br>
+    <pre><code rel="Python" class="python">
+        >>> "{1} died in {0} year".format("Ada Byron", 1852)
+        '1852 died in Ada Byron year'
+      </code></pre>
+  </section>
+  <section><h3>Literal String Interpolation (f-strings)</h3>
+    <dl class="fa">
+      <dt>F-strings provide a way to embed expressions inside string literals, using a minimal syntax</dt>
+      <pre><code rel="Python" class="python">
+        value = 42
+        # str.format() method:
+        'The value is {}.'.format(value)
+
+        # f-strings:
+        f'The value is {value}'
+      </code></pre>
+      <dt>More on f-strings: <a href="https://cito.github.io/blog/f-strings/">The new f-strings in Python 3.6</a></dt>
+    </dl>
+  </section>
+  <section><h3>resources</h3>
+    <dl class="fa">
+      <dt><a href="https://www.programiz.com/python-programming/methods/string/format">Python String format() @programiz.com</a></dt>
+      <dt><a href="https://docs.python.org/3/tutorial/inputoutput.html#tut-f-strings">Formatted String Literals</a> @python tutorial</dt>
+      <dt><a href="https://docs.python.org/3/library/string.html#formatstrings">Format String Syntax</a> @python docs</dt>
+    </dl>
+  </section>
+  <section><h3>examples</h3>
+    <pre><code rel="Python" class="python">
+        user_name = input("hi, what's your name: ")
+        user_surname = input("will you tell me your sur name?:")
+
+        print(f"Nice to meet you, {user_name} {user_surname} !")
+    </code></pre>
+    <p><span class="note">Task:</span> modify the program, such that the user names will be displayed capitalised</p>
+  </section>
+</section>
+
+<section data-min="5"><h1>Membership Testing</h1></section>
+<section><h2>Membership Testing</h2>
+  <section><h3><span class="note">in</span>, <span class="note">not in</span></h3>
+    <dl class="fa">
+      <dt><b>x</b> <span class="note">in</span> <b>sequence</b></dt>
+      <dd>returns True if <b>x</b> is member of <b>sequence</b></dd>
+      <dd>returns False if <b>x</b> is NOT member of <b>sequence</b></dd>
+      <dt><b>x</b> <span class="note">not in</span> <b>sequence</b></dt>
+      <dd>returns True if <b>x</b> is NOT member of <b>sequence</b></dd>
+      <dd>returns False if <b>x</b> is member of <b>sequence</b></dd>
+    </dl>
+  </section>
+  <section><h3>list example</h3>
+    <pre><code rel="Python" class="python">
+      ### Let's have two list:
+      fruits = ["apple", "banana", "strawberry"]
+      numbers = [1, 2, 3]
+
+      ### Membership Testing (in):
+      print("banana" in fruits)
+      # True
+
+      print("banana" in numbers)
+      # False
+
+      ### Membership Testing (not in):
+      print("banana" not in fruits)
+      # False
+
+      print("banana" not in numbers)
+      # True
+    </code></pre>
+  </section>
+  <section><h3>range example</h3>
+    <pre><code rel="Python" class="python">
+      # Let's have a range:
+      r = range(0,10)
+      print(3 in r)
+      # True
+
+      print(21 in r)
+      # False
+    </code></pre>
+  </section>
+</section>
+
+<section data-min="20"><h1>Indexing and slicing</h1></section>
+<section><h2>Indexing and slicing</h2>
+  <section><h3>Indexing from start to end</h3>
+    <a href="images/Python_List_Indexing_Start_To_End.png"><img src="images/Python_List_Indexing_Start_To_End.png"></a>
+    <dl class="fa">
+      <dt>First sequence item is with index <b>0</b>.</dt>
+      <dt>Next sequence item indexes increments with 1</dt>
+    </dl>
+  </section>
+  <section><h3>Indexing from start to end - example</h3>
+      <pre><code rel="Python" class="python">
+        ### create list of numbers:
+        numbers = [1,2,3,4,5]
+
+        ### index from start to end:
+        print(numbers[0],numbers[1],numbers[2],numbers[3],numbers[4])
+        # 1 2 3 4 5
+      </code></pre>
+  </section>
+  <section><h3>Indexing from end to start</h3>
+    <a href="images/Python_List_Indexing_End_To_Sart.png"><img src="images/Python_List_Indexing_End_To_Sart.png"></a>
+    <dl class="fa">
+      <dt>Last list item is with index <b>-1</b></dt>
+      <dt>Next sequence item indexes decrements with 1</dt>
+    </dl>
+  </section>
+  <section><h3>Indexing from end to start - example</h3>
+    <pre><code rel="Python" class="python">
+      ### create list of numbers:
+      numbers = [1,2,3,4,5]
+
+      ### index from end to start:
+      print(numbers[-1],numbers[-2],numbers[-3],numbers[-4],numbers[-5])
+      # 5 4 3 2 1
+    </code></pre>
+  </section>
+  <section><h3>Indexing from end to start - use case</h3>
+    <dl class="fa">
+      <dt>The pythonic way to get the last element of a sequence is by using the <code>-1</code> index, not by <code>len()-1</code></dt>
+    </dl>
+    <pre><code rel="Python" class="python">
+      fruits = ["apple", "banana", "strawberry"]
+
+      # the pythonic way to print last element
+      print(fruits[-1])
+      # "strawberry"
+
+      # not pythonic (though it works):
+      print(fruits[len(fruits)-1])
+      # "strawberry"
+    </code></pre>
+  </section>
+  <section><h3>Slicing - syntax</h3>
+    <pre><code rel="Syntax" class="shell" data-noescape>
+      sliced = <i>sequence</i><b>[</b><i>start</i><b>:</b><i>end</i><b>:</b><i>step</i><b>]</b>
+    </code></pre>
+    <dl class="fa" style="font-size: 0.9em">
+      <dt>Slice a sequence from <i>start</i> to <em>stop</em> with the given <em>step</em></dt>
+      <dt><em>start</em>, <em>end</em> and <em>step</em> are optional!</dt>
+      <dt>At least one column (<code>:</code>) is required!</dt>
+    </dl>
+
+    <pre><code rel="Syntax - explanation" class="python">
+      a[start:end] # get items from start through end-1
+      a[start:]    # get items from start through the rest of the array
+      a[:end]      # get items from the beginning through end-1
+      a[:]         # a copy of the whole array
+    </code></pre>
+    <p>Reference: <a href="https://docs.python.org/3/library/functions.html#slice">slice @python docs</a></p>
+  </section>
+  <section><h3>Examples</h3>
+    <pre><code rel="Python" class="python">
+      >>> str = "abcdef"
+
+      >>> str[2:3]
+      'c'
+
+      >>> str[2:4]
+      'cd'
+
+      >>> str[-1:2:-1]
+      'fed'
+
+      >>> str[-1::-1]
+      'fedcba'
+
+      # same, but ugly:
+      >>> str[-1:-7:-1]
+      'fedcba'
+
+      >>> str[]
+      SyntaxError: invalid syntax
+    </code></pre>
+  </section>
+  <section><h3>Examples</h3>
+    <pre><code rel="Python" class="python">
+      >>> str = "abcdef"
+
+      >>> str[:]
+      'abcdef'
+
+      >>> str[:3]
+      'abc'
+
+      >>> str[3:]
+      'def'
+
+      >>> str[::2]
+      'ace'
+
+      >>> str[::-1]
+      'fedcba'
+    </code></pre>
+  </section>
+  <section><h3 class="advanced">Slicing "multi-dimensional" lists</h3>
+    <dl class="fa">
+      <dt>Normal Python lists are single-dimensional, though they can look like multi-dim lists if their elements are lists</dt>
+      <dt>I.e. Python did not support syntax to slice columns from "multi dim" looking list</dt>
+      <pre><code rel="Python" class="python">
+        m = [
+          [1,2,3],
+          [4,5,6],
+          [7,8,9],
+        ]
+
+        # trying to slice the second column ([2,5,8]):
+        print(m[:,1])
+        # TypeError: list indices must be integers or slices, not tuple
+      </code></pre>
+    </dl>
+  </section>
+  <section><h3 class="advanced">Slicing multi-dimensional arrays</h3>
+    <dl class="fa">
+      <dt>But the package <a href="http://www.numpy.org/">numpy</a> contains powerful N-dimensional array objects and other numerical operations.
+      </dt>
+      <dt>In order to use it, you need to install it first:</dt>
+      <pre><code rel="Terminal" class="bash">
+        pipenv install numpy
+      </code></pre>
+      <pre><code rel="Python" class="python">
+        import numpy
+
+        # lets create a python list
+        m = [
+          [1,2,3],
+          [4,5,6],
+          [7,8,9],
+        ]
+
+        # create a numpy array from that list:
+        arr = numpy.array(m)
+
+        # now we can easily use numpy's multi-dim slicing:
+        print(arr[:,1])
+        #[2 5 8]
+
+        print(type(arr[:,1]))
+        <class 'numpy.ndarray'>
+      </code></pre>
+    </dl>
+  </section>
+</section>
+
+<section data-min="20"><h1>Iterate on sequences</h1></section>
+<section><h2>Iterate on sequences</h2>
+  <section><h3>Syntax</h3>
+    <pre><code rel="Terminal" class="shell" data-noescape>
+      for item in <em>sequence</em>:
+          # do something with item
+    </code></pre>
+    <pre><code rel="Python" class="python">
+      ### loop on list items:
+      for item in [1,2,3]:
+          print(item)
+
+      ### loop on tuple items:
+      for item in (10, "December", 1985):
+          print(item)
+
+      ### loop on string items:
+      for item in "byron":
+          print(item)
+
+      ### loop on range items:
+      for item in range(1,3):
+          print(item)
+    </code></pre>
+  </section>
+  <section><h3 class="advanced">Loop on indexes of sequence: C-style</h3>
+    <dl class="fa">
+      <dt>As we saw, Python doesn't have C-style for loop, but we can emulate it with:</dt>
+    </dl>
+    <pre><code rel="Python" class="python">
+      user_name = "ivan"
+
+      # i will take values from 0, till 4 - which are the indexes
+      for i in range(len(user_name)):
+        print("{} - {}".format(i, user_name[i]))
+    </code></pre>
+    <pre><code rel="Output" class="bash" data-noescape>
+      0 - i
+      1 - v
+      2 - a
+      3 - n
+    </code></pre>
+  </section>
+  <section><h3>Loop on indexes of sequence: Pythonic way</h3>
+    <dl class="fa">
+      <dt>To get the index and the item in a <code>for</code> loop, we can also use the <a href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a> built-in function:</dt>
+    </dl>
+    <pre><code rel="Python" class="python">
+      for i,l in enumerate(user_name):
+        print("{} - {}".format(i, l))
+    </code></pre>
+    <pre><code rel="Output" class="bash" data-noescape>
+      0 - i
+      1 - v
+      2 - a
+      3 - n
+    </code></pre>
+  </section>
+</section>
+
+<section data-min="5"><h1>Built-in String methods.</h1></section>
+<section><h2>Built-in String methods.</h2>
+  <section><h3>str.capitalize()</h3>
+    <dl class="fa">
+      <dt><code>str.capitalize()</code> - Return a copy of the string with its first character capitalized and the rest lowercased.</dt>
+    </dl>
+  </section>
+  <section><h3>str.count()</h3>
+    <dl class="fa">
+      <dt><code>str.count(sub[, start[, end]])</code> - Return the number of non-overlapping occurrences of substring sub in the range [start, end]. Optional arguments start and end are interpreted as in slice notation.</dt>
+    </dl>
+  </section>
+  <section><h3>str.find()</h3>
+    <dl class="fa">
+      <dt><code>str.find(sub[, start[, end]])</code> - Return the lowest index in the string where substring sub is found within the slice s[start:end]. Optional arguments start and end are interpreted as in slice notation. Return -1 if sub is not found.</dt>
+      <dt><span class="note">The find() method should be used only if you need to know the position of sub. To check if sub is a substring or not, use the <code>in</code> operator:</span></dt>
+    </dl>
+  </section>
+  <section><h3>str.join()</h3>
+    <dl class="fa">
+      <dt><code>str.join(iterable)</code> - Return a string which is the concatenation of the strings in iterable. A TypeError will be raised if there are any non-string values in iterable, including bytes objects. The separator between elements is the string providing this method.</dt>
+    </dl>
+  </section>
+  <section><h3>str.split()</h3>
+    <dl class="fa">
+      <dt><code>str.split(sep=None, maxsplit=-1)</code> - Return a list of the words in the string, using sep as the delimiter string. If maxsplit is given, at most maxsplit splits are done. If maxsplit is not specified or -1, then all possible splits are made. <br>
+      The sep argument may consist of multiple characters (for example, '1<>2<>3'.split('<>') returns ['1', '2', '3']).</dt>
+      <dt>note that to split a string on each character, you can use the <code>list(str)</code> function.</dt>
+    </dl>
+  </section>
+  <section><h3>str.splitlines()</h3>
+    <dl class="fa">
+      <dt><code>str.splitlines([keepends])</code> - Return a list of the lines in the string, breaking at line boundaries. Line breaks are not included in the resulting list unless keepends is given and true.</dt>
+    </dl>
+  </section>
+  <section><h3>str.lower()</h3>
+    <dl class="fa">
+      <dt><code>str.lower()</code> - Return a copy of the string with all the cased characters 4 converted to lowercase.</dt>
+    </dl>
+  </section>
+  <section><h3>str.replace()</h3>
+    <dl class="fa">
+      <dt><code>str.replace(old, new[, count])</code> - Return a copy of the string with all occurrences of substring old replaced by new. If the optional argument count is given, only the first count occurrences are replaced.</dt>
+    </dl>
+  </section>
+  <section><h3>str.title()</h3>
+    <dl class="fa">
+      <dt><code>str.title()</code> - Return a titlecased version of the string where words start with an uppercase character and the remaining characters are lowercase.</dt>
+    </dl>
+  </section>
+
+  <section><h3>Live Demo</h3>
+    <p>Reference: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">string-methods</a> @python-docs</p>
+  </section>
+</section>
+
+<section data-min="5"><h1>Sorting lists</h1></section>
+<section><h2>Sorting lists</h2>
+  <section><h3>Live Demo</h3>
+    <p>Reference: <a href="https://docs.python.org/3/library/stdtypes.html#list.sort">list.sort</a> @python-docs</p>
+  </section>
+</section>
+
+
+
+<section id="hw" data-min="4"><h1>Exercises</h1></section>
+<section><h2>Task1: print positive even numbers</h2>
+  <section><h3>The Task</h3>
+    <dl class="fa">
+      <dt>Print only the positive (i.e. > 0) even numbers from a given list</dt>
+    </dl>
+    <pre><code rel="Python" class="python">
+      # given
+      numbers = [2, -4, -3, 13, 8, -6, 4]
+
+      # your code goes below:
+
+
+      # expected output:
+      # 2
+      # 8
+      # 4
+    </code></pre>
+  </section>
+</section>
+<section><h2>Task2: function count_even_positives()</h2>
+  <section><h3>The Task</h3>
+    <dl class="fa">
+      <dt>Define a function <code>count_even_positives()</code> which takes as argument a list of numbers, and returns the count of positive (i.e. > 0) even numbers from the given list</dt>
+    </dl>
+    <pre><code rel="Python" class="python">
+      # define the function 'find_even_positives()' bellow:
+
+
+      # example function call:
+      even_positives_count = count_even_positives( [2, -4, -3, 13, 8, -6, 4] )
+      print( even_positives_count )
+
+
+      # expected output:
+      # 3
+    </code></pre>
+  </section>
+</section>
+<section><h2>Task3: find words starting with 't' or 'T'</h2>
+  <section><h3>The Task</h3>
+    <dl class="fa">
+      <dt>Get all words from a given string (for simplicity, just split it on space) and print only the words which starts with 't' or 'T'</dt>
+    </dl>
+    <pre><code rel="Python" class="python">
+      # given is the string:
+      sentence = '''There is a theory which states that if ever anyone discovers exactly
+      what the Universe is for and why it is here, it will instantly disappear and be
+      replaced by something even more bizarre and inexplicable. There is another theory
+      which states that this has already happened.'''
+
+      # get a list of words from string  - use str.split() method with space as separator
+      # your code goes below:
+
+
+      # loop through words and print only the ones which starts with 'a' or 'A'
+      # your code goes below:
+
+
+      # expected output:
+      # There
+      # theory
+      # that
+      # the
+      # There
+      # theory
+      # that
+      # this
+    </code></pre>
+  </section>
+</section>
+
+<section><h3>Submission</h3>
+  <dl class="fa">
+    <dt>Pease, prefix your filenames/archive with your name initials, before sending.</dt>
+    <dd>For instance: <b>iep_task1.py</b> or <b>iep_tasks.rar</b></dd>
+    <dt>Send files to <a href="mailto:ProgressBG.WWW.Courses@gmail.com?Subject=HW:strings_and_list_manipulations">ProgressBG.WWW.Courses@gmail.com</a></dt>
+  </dl>
+</section>
+
+
+<section class="disclaimer" data-background="/Ind-MLwithPython-Slides/outfit/images/for_slides/the_end_on_sand.jpg">
+  <p>These slides are based on</p>
+  <p>customised version of </p>
+  <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+   <p>framework</p>
+</section>
+<!--
+########################################################
+##################### SLIDES END   #####################
+########################################################
+-->
+    </div>
+  </div>
+  <!-- Custom processing -->
+  <script src="/Ind-MLwithPython-Slides/outfit/js/slides.js"></script>
+  <!-- external scripts -->
+  <script src="/Ind-MLwithPython-Slides/lib/reveal.js/lib/js/head.min.js"></script>
+  <script src="/Ind-MLwithPython-Slides/lib/reveal.js/js/reveal.js"></script>
+
+  <!-- init reveal -->
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    var highlightjsTabSize = '  ';
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      slideNumber: 'c/t',
+      keyboard: true,
+      history: true,
+
+      // display control
+      // center: true,
+      // width: '100%',
+      // height: '100%',
+      // // Factor of the display size that should remain empty around the content
+      // margin: 0.1,
+
+      // The "normal" size of the presentation, aspect ratio will be preserved
+      // when the presentation is scaled to fit different resolutions. Can be
+      // specified using percentage units.
+      width: 960,
+      height: 700,
+
+      // Factor of the display size that should remain empty around the content
+      margin: 0.1,
+
+      // Bounds for smallest/largest possible scale to apply to content
+      minScale: 0.2,
+      maxScale: 1.5,
+
+      // slide transition
+      transition: 'concave', // none/fade/slide/convex/concave/zoom
+      // shift+maous click to zoom in/out element
+      zoomKey: 'ctrl',
+      // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      // transition: Reveal.getQueryHash().transition || 'default'
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/notes/notes.js', async: true }
+      ]
+    });
+  </script>
+  <!-- linkedin badge -->
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</body>
+</html>
