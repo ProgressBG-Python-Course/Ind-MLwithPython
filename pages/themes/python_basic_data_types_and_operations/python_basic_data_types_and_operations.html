@@ -1,1609 +1,1616 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>python_basic_data_types_and_operations</title>
-  <link rel="shortcut icon" href="/Ind-MLwithPython-Slides/favicon.ico">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <!-- css & themes include -->
-  <link rel="stylesheet" href="/Ind-MLwithPython-Slides/lib/reveal.js/css/reveal.css">
-  <link rel="stylesheet" href="/Ind-MLwithPython-Slides/outfit/css/themes/projector.css" id="theme">
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? '/Ind-MLwithPython-Slides/lib/reveal.js/css/print/pdf.css' : '/Ind-MLwithPython-Slides/lib/reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="lib/js/html5shiv.js"></script>
-  <![endif]-->
-  <!-- CUSTOM -->
-  <base target="_blank">
+	<meta charset="utf-8">
+	<title>python_basic_data_types_and_operations</title>
+	<link rel="shortcut icon" href="/Ind-MLwithPython-Slides/favicon.ico">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<!-- css & themes include -->
+	<link rel="stylesheet" href="/Ind-MLwithPython-Slides/lib/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="/Ind-MLwithPython-Slides/outfit/css/themes/projector.css" id="theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '/Ind-MLwithPython-Slides/lib/reveal.js/css/print/pdf.css' : '/Ind-MLwithPython-Slides/lib/reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- CUSTOM -->
+	<base target="_blank">
 </head>
 <body>
-  <div class="reveal default center" data-transition-speed="default" data-background-transition="default">
-    <div class="top_links">
-      <a class="home_link" href="/Ind-MLwithPython-Slides/index.html#python_basic_data_types_and_operations" target="_top"><i class="fa fa-home"></i></a>
-      <span class="help_link" href="#"><i class="fa fa-question"></i></span>
-      <div class="help_text">
-        <div><span>N/Space</span><span>Next Slide</span></div>
-        <div><span>P</span><span>Previous Slide</span></div>
-        <div><span>O</span><span>Slides Overview</span></div>
-        <div><span>ctrl+left click</span><span>Zoom Element</span></div>
-      </div>
-    </div>
-    <div class="footer theme_switch">
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/dark.css'); return false;">Dark</a>
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/light.css'); return false;">Light</a>
-      <a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/projector.css'); return false;">Projector</a>
-    </div>
-    <div class="slides">
+	<div class="reveal default center" data-transition-speed="default" data-background-transition="default">
+		<div class="top_links">
+			<a class="home_link" href="/Ind-MLwithPython-Slides/index.html#python_basic_data_types_and_operations" target="_top"><i class="fa fa-home"></i></a>
+			<span class="help_link" href="#"><i class="fa fa-question"></i></span>
+			<div class="help_text">
+				<div><span>N/Space</span><span>Next Slide</span></div>
+				<div><span>P</span><span>Previous Slide</span></div>
+				<div><span>O</span><span>Slides Overview</span></div>
+				<div><span>ctrl+left click</span><span>Zoom Element</span></div>
+			</div>
+		</div>
+		<div class="footer theme_switch">
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/dark.css'); return false;">Dark</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/light.css'); return false;">Light</a>
+			<a href="#" onclick="document.getElementById('theme').setAttribute('href','/Ind-MLwithPython-Slides/outfit/css/themes/projector.css'); return false;">Projector</a>
+		</div>
+		<div class="slides">
+
+<section data-min-total="4"><h1>Python - basic data types and operations</h1></section>
+<section class="copyright" data-transition="zoom">
+	<section >
+		<div class="note">
+			<p>Created for</p>
+		</div>
+		<div class="company">
+			<a href="http://progressbg.net/machine-learning/">
+			<img style="height:80%" src="/Ind-MLwithPython-Slides/outfit/images/logos/ProgressBG_logo_529_127.png">
+			</a>
+		</div>
+	</section>
+	<section>
+		<div class="note">
+			<p>Created by</p>
+		</div>
+		<div class="company">
+			<div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
+		</div>
+		<div class="author">
+			<span>2020,</span>
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+		</div>
+	</section>
+</section>
+
 <!--
 ########################################################
 ##################### SLIDES START #####################
 ########################################################
 -->
-<section data-min-total="160"><h1>Python Built-in Data Types and Basic Operations</h1></section>
-<section class="copyright" data-transition="zoom">
-  <section >
-    <div class="note">
-      <p>Created for</p>
-    </div>
-    <div class="company">
-      <a href="http://progressbg.net/kurs-po-web-design/">
-      <img style="height:80%" src="/Ind-MLwithPython-Slides/outfit/images/logos/ProgressBG_logo_529_127.png">
-      </a>
-    </div>
-  </section>
-  <section>
-    <div class="note">
-      <p>Created by</p>
-    </div>
-    <div class="company">
-      <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="ivapopova"><a class="LI-simple-link" href='https://bg.linkedin.com/in/ivapopova?trk=profile-badge'>Iva E. Popova</a></div>
-    </div>
-    <div class="author">
-      <span>2019,</span>
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-    </div>
-  </section>
-</section>
-
-
 
 <section data-min="5"><h1>Data Types Introduction</h1></section>
 <section><h2>Data Types Introduction</h2>
-  <dl class="fa">
-    <dt>Programming is about manipulating <b>data</b></dt>
-    <dt>Each programming language defines its data types and the corresponding operations which can be performed on each data type.</dt>
-    <dt>In Python, each data type literal is represented internally as <b>object</b></dt>
-  </dl>
+	<dl class="fa">
+		<dt>Programming is about manipulating <b>data</b></dt>
+		<dt>Each programming language defines its data types and the corresponding operations which can be performed on each data type.</dt>
+		<dt>In Python, each data type literal is represented internally as <b>object</b></dt>
+	</dl>
 </section>
 
 <section data-min="10"><h1>Numeric Data Types</h1></section>
 <section><h2>Numeric Data Types</h2>
-  <section>
-    <dl class="fa">
-      <dt>In Python we can use <span class="keyword">integer</span>, <span class="keyword">floating point</span> and <span class="keyword">complex</span> numbers</dt>
-      <dt>Numbers are <span class="note">immutable</span> data type!</dt>
-      <dt>Most arithmetic operations are natively defined in Python.</dt>
-      <dt>More complex math functions are defined in the <a href="https://docs.python.org/3/library/math.html">math module</a></dt>
-    </dl>
-  </section>
-  <section><h3>integer numbers</h3>
-    <p>we can use positive and negative integers:</p>
-    <pre><code rel="Python" class="python3">
-      # positive integer literal:
-      >>> 42
-      42
+	<section>
+		<dl class="fa">
+			<dt>In Python we can use <span class="keyword">integer</span>, <span class="keyword">floating point</span> and <span class="keyword">complex</span> numbers</dt>
+			<dt>Numbers are <span class="note">immutable</span> data type!</dt>
+			<dt>Most arithmetic operations are natively defined in Python.</dt>
+			<dt>More complex math functions are defined in the <a href="https://docs.python.org/3/library/math.html">math module</a></dt>
+		</dl>
+	</section>
+	<section><h3>integer numbers</h3>
+		<p>we can use positive and negative integers:</p>
+		<pre><code rel="Python" class="python3">
+			# positive integer literal:
+			>>> 42
+			42
 
-      >>> +42
-      42
+			>>> +42
+			42
 
-      # negative integer literal:
-      >>> -42
-      -42
-    </code></pre>
-  </section>
-  <section><h3>floating point numbers</h3>
-    <p>we can use positive and negative floating point numbers</p>
-    <pre><code rel="Python" class="python3">
-      >>> 3.1234
-      3.1234
+			# negative integer literal:
+			>>> -42
+			-42
+		</code></pre>
+	</section>
+	<section><h3>floating point numbers</h3>
+		<p>we can use positive and negative floating point numbers</p>
+		<pre><code rel="Python" class="python3">
+			>>> 3.1234
+			3.1234
 
-      >>> -0.255
-      -0.255
+			>>> -0.255
+			-0.255
 
-      # leading zero can be skipped:
-      >>> .44
-      0.44
-      >>> -.55
-      -0.55
-      >>>
-    </code></pre>
-  </section>
-  <section><h3>Underscores in Numeric Literals</h3>
-    <dl class="fa">
-      <dt>As of <span class="note">Python 3.6</span> you can use underscores in numeric literals to improve readability of long numbers</dt>
-      <pre><code rel="Python" class="python3">
-        >>> 1_000_000 + 2_000_000
-        3000000
-      </code></pre>
-    </dl>
-  </section>
-  <section><h3>arithmetic operations</h3>
-    <dl class="fa">
-      <dt>Python supports the standard arithmetic operations:</dt>
-      <dd><a href="https://docs.python.org/3/library/stdtypes.html?highlight=arithmetic%20operation#numeric-types-int-float-complex">Numeric Types</a>@python docs</dd>
-    </dl>
-    <p class="note">The division operator "<code>/</code>" in python2 returns the integer part(i.e. works like Floor division), while in python3 it returns the float result</p>
-  </section>
-  <section><h3>Example: arithmetic operations</h3>
-    <pre><code rel="Python" class="python3">
-        >>> 5-3
-        2
-        >>> 5*3
-        15
-        >>> 5/3
-        1.6666666666666667
-        >>> 5//3
-        1
-        >>> 5%3
-        2
-    </code></pre>
-  </section>
-  <section><h3>Example: python3 vs python2 division</h3>
-    <pre><code rel="Python2" class="python3">
-      >>> 5/3
-      1
-    </code></pre>
-    <pre><code rel="Python3" class="python3">
-      >>> 5/3
-      1.6666666666666667
+			# leading zero can be skipped:
+			>>> .44
+			0.44
+			>>> -.55
+			-0.55
+			>>>
+		</code></pre>
+	</section>
+	<section><h3>Underscores in Numeric Literals</h3>
+		<dl class="fa">
+			<dt>As of <span class="note">Python 3.6</span> you can use underscores in numeric literals to improve readability of long numbers</dt>
+			<pre><code rel="Python" class="python3">
+				>>> 1_000_000 + 2_000_000
+				3000000
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>arithmetic operations</h3>
+		<dl class="fa">
+			<dt>Python supports the standard arithmetic operations</dt>
+			<dd>Reference: <a href="https://docs.python.org/3/library/stdtypes.html?highlight=arithmetic%20operation#numeric-types-int-float-complex">Numeric Types </a>@python docs</dd>
+		</dl>
+		<p class="note">The division operator "<code>/</code>" in python2 returns the integer part(i.e. works like Floor division), while in python3 it returns the float result</p>
+	</section>
+	<section><h3>Example: arithmetic operations</h3>
+		<pre><code rel="Python" class="python3">
+				>>> 5-3
+				2
+				>>> 5*3
+				15
+				>>> 5/3
+				1.6666666666666667
+				>>> 5//3
+				1
+				>>> 5%3
+				2
+		</code></pre>
+	</section>
+	<section><h3>Example: python3 vs python2 division</h3>
+		<pre><code rel="Python2" class="python3">
+			>>> 5/3
+			1
+		</code></pre>
+		<pre><code rel="Python3" class="python3">
+			>>> 5/3
+			1.6666666666666667
 
-      >>> 5//3
-      1
-    </code></pre>
-    <p class="note">Python3 adds the "<code>//</code>" operator for Integer division</p>
-  </section>
-  <section><h3>the <code>math</code> module</h3>
-    <dl class="fa">
-      <dt>math module is native to every python distribution.</dt>
-      <dt>to use its functions you only have to import it in your program:</dt>
-      <pre><code rel="Python" class="python3">
-        import math
-        # do something with math
-      </code></pre>
-      <dt><a href="https://docs.python.org/3/library/math.html">math — Mathematical functions</a> @python docs</dt>
-    </dl>
-  </section>
-  <section><h3>Built-in math functions</h3>
-    <dl class="fa">
-      <dt>Python interpreter has a number of built-in functions which can be used without any imports.</dt>
-      <dt>Part of them, concerning Math are: <code><a href="https://docs.python.org/3/library/functions.html#abs">abs()</a></code>, <code><a href="https://docs.python.org/3/library/functions.html#max">max()</a></code>, <code><a href="https://docs.python.org/3/library/functions.html#min">min()</a></code>, <code><a href="https://docs.python.org/3/library/functions.html#round">round()</a></code></dt>
-    </dl>
-  </section>
-  <section><h3>Example: math module methods</h3>
-    <pre><code rel="Python" class="python3">
-      >>> import math
-      >>>
-      >>> math.pi
-      3.141592653589793
-      >>> math.floor(math.pi)
-      3
-      >>> math.pow(2,3)
-      8.0
-      >>> math.sqrt(9)
-      3.0
-      >>> math.ceil(2.9)
-      3
-      >>> math.ceil(2.1)
-      3
-      >>> math.floor(2.9)
-      2
-      >>> math.floor(2.1)
+			>>> 5//3
+			1
+		</code></pre>
+		<p class="note">Python3 adds the "<code>//</code>" operator for Integer division</p>
+	</section>
+	<section><h3>the <code>math</code> module</h3>
+		<dl class="fa">
+			<dt>math module is native to every python distribution.</dt>
+			<dt>to use its functions you only have to import it in your program:</dt>
+			<pre><code rel="Python" class="python3">
+				import math
+				# do something with math
+			</code></pre>
+			<dt><a href="https://docs.python.org/3/library/math.html">math — Mathematical functions</a> @python docs</dt>
+		</dl>
+	</section>
+	<section><h3>Built-in math functions</h3>
+		<dl class="fa">
+			<dt>Python interpreter has a number of built-in functions which can be used without any imports.</dt>
+			<dt>Part of them, concerning Math are: <code><a href="https://docs.python.org/3/library/functions.html#abs">abs()</a></code>, <code><a href="https://docs.python.org/3/library/functions.html#max">max()</a></code>, <code><a href="https://docs.python.org/3/library/functions.html#min">min()</a></code>, <code><a href="https://docs.python.org/3/library/functions.html#round">round()</a></code></dt>
+		</dl>
+	</section>
+	<section><h3>Example: math module methods</h3>
+		<pre><code rel="Python" class="python3">
+			>>> import math
+			>>>
+			>>> math.pi
+			3.141592653589793
+			>>> math.floor(math.pi)
+			3
+			>>> math.pow(2,3)
+			8.0
+			>>> math.sqrt(9)
+			3.0
+			>>> math.ceil(2.9)
+			3
+			>>> math.ceil(2.1)
+			3
+			>>> math.floor(2.9)
+			2
+			>>> math.floor(2.1)
 
-    </code></pre>
-  </section>
-  <section><h3>Example: math built-in functions</h3>
-    <pre><code rel="Python" class="python3">
-      >>> round(2.51)
-      3
-      >>> round(2.49)
-      2
-      >>> max(1,2,3)
-      3
-      >>> min(1,2,3)
-      1
-      >>> abs(2-5)
-      3
+		</code></pre>
+	</section>
+	<section><h3>Example: math built-in functions</h3>
+		<pre><code rel="Python" class="python3">
+			>>> round(2.51)
+			3
+			>>> round(2.49)
+			2
+			>>> max(1,2,3)
+			3
+			>>> min(1,2,3)
+			1
+			>>> abs(2-5)
+			3
 
-    </code></pre>
-  </section>
+		</code></pre>
+	</section>
 </section>
 
 <section data-min="20"><h1>Strings in Python</h1></section>
 <section><h2>Strings in Python</h2>
-  <section><h3>definition</h3>
-    <dl class="fa">
-      <dt>Strings are <b>immutable</b> sequences of Unicode code points <span style="font-size: 0.8em">(will be discussed further)</span>.</dt>
-      <dt>Single-line strings literal should be closed in single or double quotes</dt>
-      <dd><i>No difference between single or double quoted strings!</i></dd>
-      <dt>Multi-line strings literal should be closed in triple single or double quotes</dt>
-    </dl>
-  </section>
-  <section><h3>Examples</h3>
-    <pre><code rel="Python" class="python3">
-      >>> "this is a single line string"
-      'this is a single line string'
+	<section><h3>definition</h3>
+		<dl class="fa">
+			<dt>Strings are <b>immutable</b> sequences of Unicode code points <span style="font-size: 0.8em">(will be discussed further)</span>.</dt>
+			<dt>Single-line strings literal should be closed in single or double quotes</dt>
+			<dd><i>No difference between single or double quoted strings!</i></dd>
+			<dt>Multi-line strings literal should be closed in triple single or double quotes</dt>
+		</dl>
+	</section>
+	<section><h3>Examples</h3>
+		<pre><code rel="Python" class="python3">
+			>>> "this is a single line string"
+			'this is a single line string'
 
-      >>> 'another single line string with UTF charactes like 🍷'
-      'another single line string with UTF charactes like 🍷'
+			>>> 'another single line string with UTF charactes like 🍷'
+			'another single line string with UTF charactes like 🍷'
 
-      >>> 'but can not be spred in multiple lines
-      File "<stdin>", line 1
-        'but can not be spred in multiple lines
-                                             ^
-      SyntaxError: EOL while scanning string literal
-    </code></pre>
-  </section>
-  <section><h3>Examples</h3>
-    <pre><code rel="Python" class="python3">
-      >>> """infact you can -
-      ... if you use these triple quotes"""
-      'infact you can - \nif you use these triple quotes'
+			>>> 'but can not be spred in multiple lines
+			File "<stdin>", line 1
+				'but can not be spred in multiple lines
+																						 ^
+			SyntaxError: EOL while scanning string literal
+		</code></pre>
+	</section>
+	<section><h3>Examples</h3>
+		<pre><code rel="Python" class="python3">
+			>>> """infact you can -
+			... if you use these triple quotes"""
+			'infact you can - \nif you use these triple quotes'
 
-      >>> '''or these triple quotes
-      ... can separate multiline without errors'''
-      'or these triple quotes\ncan separate multiline without errors'
+			>>> '''or these triple quotes
+			... can separate multiline without errors'''
+			'or these triple quotes\ncan separate multiline without errors'
 
 
-    </code></pre>
-  </section>
+		</code></pre>
+	</section>
 </section>
 
 <section data-min="10"><h1>Strings operations</h1></section>
 <section><h2>Strings operations</h2>
-  <section><h3>concatenation: <code>+</code></h3>
-    <p>The operation is defined only on <span class="note">same data types</span>, I.e. Python can not concatenate apples with oranges:</p>
-    <pre><code rel="Python" class="python3">
-      #string concatenation with '+':
-      >>> "ala" + "bala"
-      'alabala
+	<section><h3>concatenation: <code>+</code></h3>
+		<p>The operation is defined only on <span class="note">same data types</span>, I.e. Python can not concatenate apples with oranges:</p>
+		<pre><code rel="Python" class="python3">
+			#string concatenation with '+':
+			>>> "ala" + "bala"
+			'alabala
 
-      >>> "1" + "2"
-      '12'
+			>>> "1" + "2"
+			'12'
 
-      >>> "1" + 3
-      Traceback ...
-      TypeError: cannot concatenate 'str' and 'int' objects
-    </code></pre>
-  </section>
-  <section><h3>repetition: <code>*</code></h3>
-    <p>One of the operands must be <span class="note">string</span>, the other - <span class="note">integer</span></p>
-    <pre><code rel="Python" class="python3">
-      >>> "-" * 10
-      '----------'
+			>>> "1" + 3
+			Traceback ...
+			TypeError: cannot concatenate 'str' and 'int' objects
+		</code></pre>
+	</section>
+	<section><h3>repetition: <code>*</code></h3>
+		<p>One of the operands must be <span class="note">string</span>, the other - <span class="note">integer</span></p>
+		<pre><code rel="Python" class="python3">
+			>>> "-" * 10
+			'----------'
 
-      >>> "1" * 10
-      '1111111111'
+			>>> "1" * 10
+			'1111111111'
 
-      >>> ">hello<" * 3
-      '>hello<>hello<>hello<'
+			>>> ">hello<" * 3
+			'>hello<>hello<>hello<'
 
-      >>> "a" * "3"
-      Traceback ...
-      TypeError: can't multiply sequence by non-int of type 'str'
-    </code></pre>
-  </section>
-  <section><h3>String Methods</h3>
-    <pre><code rel="Python" class="python3">
-      # string methods:
-      >>> "ada".capitalize()
-      'Ada'
-      >>> "alabala".count("a")
-      4
-      >>> "Alabala".count("a")
-      3
-      >>> "AlabAla".find("a")
-      2
-      >>> "alabala".replace("a", "o")
-      'olobolo'
-      >>> "one,two,three".split(",")
-      ['one', 'two', 'three']
+			>>> "a" * "3"
+			Traceback ...
+			TypeError: can't multiply sequence by non-int of type 'str'
+		</code></pre>
+	</section>
+	<section><h3>String Methods</h3>
+		<pre><code rel="Python" class="python3">
+			# string methods:
+			>>> "ada".capitalize()
+			'Ada'
+			>>> "alabala".count("a")
+			4
+			>>> "Alabala".count("a")
+			3
+			>>> "AlabAla".find("a")
+			2
+			>>> "alabala".replace("a", "o")
+			'olobolo'
+			>>> "one,two,three".split(",")
+			['one', 'two', 'three']
 
 
-    </code></pre>
-    <p style="opacity: 0.7; font-size: 0.9em">What a method is will be discussed further, after the Functions topic!</p>
-    <p>For now, you can try to look at the docs: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">String Methods @docs.python.org</a></p>
-  </section>
+		</code></pre>
+		<p style="opacity: 0.7; font-size: 0.9em">What a method is will be discussed further, after the Functions topic!</p>
+		<p>For now, you can try to look at the docs: <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">String Methods @docs.python.org</a></p>
+	</section>
 </section>
 
 <section data-min="5"><h1>Comments</h1></section>
 <section><h2>Comments</h2>
-  <section><h3>Why to comment our code?</h3>
-    <dl class="fa">
-      <dt>Python interpreter ignores every part of a program, which is marked as a "comment"</dt>
-      <dt>Comments are used to explain and/or summarize a part of our program in a more readable manner</dt>
-      <dt>For debugging purposes - when we need fast to ignore a block of code</dt>
-      <dt>For other meta information about the program (programme name, author, date, etc.)</dt>
-      <dt>A well commented program is more readable and maintainable</dt>
-    </dl>
-  </section>
-  <section><h3>How to comment our code?</h3>
-    <dl class="fa">
-      <dt>Single line comment: <code class="note">#</code></dt>
-      <dd>every line which starts with <code class="note">#</code>(hash tag) is a comment and is ignored py Python interpreter</dd>
-      <pre><code rel="Python" class="python3">
-        # this is a just a comment: no print("whatever") will happens
-        print("this will be printed, of course")
+	<section><h3>Why to comment our code?</h3>
+		<dl class="fa">
+			<dt>Python interpreter ignores every part of a program, which is marked as a "comment"</dt>
+			<dt>Comments are used to explain and/or summarize a part of our program in a more readable manner</dt>
+			<dt>For debugging purposes - when we need fast to ignore a block of code</dt>
+			<dt>For other meta information about the program (programme name, author, date, etc.)</dt>
+			<dt>A well commented program is more readable and maintainable</dt>
+		</dl>
+	</section>
+	<section><h3>How to comment our code?</h3>
+		<dl class="fa">
+			<dt>Single line comment: <code class="note">#</code></dt>
+			<dd>every line which starts with <code class="note">#</code>(hash tag) is a comment and is ignored py Python interpreter</dd>
+			<pre><code rel="Python" class="python3">
+				# this is a just a comment: no print("whatever") will happens
+				print("this will be printed, of course")
 
-        ### a more semantic example for comment:
-        # check if a triangle with sides (3,4,5) is a Pythagorean:
-        print(3**2 + 4**2 == 5**2)
-      </code></pre>
-    </dl>
-  </section>
-  <section><h3>Reference</h3>
-    <a href="https://www.python.org/dev/peps/pep-0008/#comments">PEP8 - Comments</a>
-  </section>
+				### a more semantic example for comment:
+				# check if a triangle with sides (3,4,5) is a Pythagorean:
+				print(3**2 + 4**2 == 5**2)
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>Reference</h3>
+		<a href="https://www.python.org/dev/peps/pep-0008/#comments">PEP8 - Comments</a>
+	</section>
 </section>
 
-<section><h1>Exercises</h1>
-  <section id="hw_bmi"><h2><b>Body Mass Index calculator</b></h2>
-    <section><h3>The problem</h3>
-      <dl class="fa">
-        <dt>Calculate your body mass index (BMI) with Python, given the formula:<br>
-        <code class="note">BMI = W / (H*H)</code><br>
-        where:
-        </dt>
-        <dd>W = weight_in_kilogram</dd>
-        <dd>H = height_in_meters</dd>
-        <dt>Your program should outputs the rounded result (to 2 digits from the decimal point). You can use the python's build-in <a href="https://www.tutorialspoint.com/python/number_round.htm">round()</a> function, like:</dt>
-        <pre><code rel="Python" class="python3">
-          >>> round(2.1457, 2)
-          2.15
+<section><h1>Exercises</h1></section>
+<section id="hw_bmi"><h2><b>Body Mass Index calculator</b></h2>
+	<section><h3>The problem</h3>
+		<dl class="fa">
+			<dt>Calculate your body mass index (BMI) with Python, given the formula:<br>
+			<code class="note">BMI = W / (H*H)</code><br>
+			where:
+			</dt>
+			<dd>W = weight_in_kilogram</dd>
+			<dd>H = height_in_meters</dd>
+			<dt>Your program should outputs the rounded result (to 2 digits from the decimal point). You can use the python's build-in <a href="https://www.tutorialspoint.com/python/number_round.htm">round()</a> function, like:</dt>
+			<pre><code rel="Python" class="python3">
+				>>> round(2.1457, 2)
+				2.15
 
-          >>> round(1.4234,2)
-          1.42
+				>>> round(1.4234,2)
+				1.42
 
-          >>> round(1.4284,2)
-          1.43
-        </code></pre>
-      </dl>
-    </section>
-    <section><h3>solution</h3>
-      <pre><code rel="Python" class="python3">
-        """
-        Solution without using variables to store values,
+				>>> round(1.4284,2)
+				1.43
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3>solution</h3>
+		<pre><code rel="Python" class="python3">
+			"""
+			Solution without using variables to store values,
 
-        and given that W = 53, H = 1.67:
-        """
-        print(round(53/(1.67*1.67), 2))
+			and given that W = 53, H = 1.67:
+			"""
+			print(round(53/(1.67*1.67), 2))
 
-        # 19.0
+			# 19.0
 
-      </code></pre>
-    </section>
-    <section><h3>HW: BMI.py</h3>
-      <dl class="fa">
-        <dt>Try to think of a solution, which will be readable enough and easy to maintain in future (you can use comments and semantic variable names)</dt>
-      </dl>
-    </section>
-  </section>
+		</code></pre>
+	</section>
+	<section><h3>HW: BMI.py</h3>
+		<dl class="fa">
+			<dt>Try to think of a solution, which will be readable enough and easy to maintain in future (you can use comments and semantic variable names)</dt>
+		</dl>
+	</section>
 </section>
+
 
 <section data-min="5"><h1>Variables/Value Names</h1></section>
 <section><h2>Variables in Python</h2>
-  <section><h3>What is a variable in Python?</h3>
-    <dl class="fa">
-      <dt>A <span class="note">name</span> (identifier) for "container" (placed in RAM) in which values can be stored and retrieved.</dt>
-    </dl>
-    <a href="images/python_variables_in_RAM.png"><img src="images/python_variables_in_RAM.png"></a>
-  </section>
-  <section><h3>What is a variable in Python?</h3>
-    <dl class="fa">
-      <dt>We can assign (write in RAM) value to a variable, like this: <code>x = 5</code></dt>
-      <dt>We can use(read from RAM) the value assigned to a variable: <code>print(x)</code></dt>
-      <dt>In Python we speak about <span class="note">name binding</span>, when we assign a value to variable.</dt>
-    </dl>
-  </section>
-  <section><h3>Identifiers naming rules</h3>
-    <p>Identifiers is a common term, which denotes variables, functions, objects, classes and other names used in a programming language.</p>
-    <p>Valid identifier in Python is a combination of one or more allowed symbols:</p>
-    <dl class="fa">
-      <dt>lower-case letters (<span class="note">a to z</span>)</dt>
-      <dt>upper-case letters (<span class="note">A to Z</span>)</dt>
-      <dt>digits (<span class="note">0 to 9</span>)</dt>
-      <dt>underscore (<span class="note">_</span>)</dt>
-      <dt class="note">Identifiers can not start with number!</dt>
-    </dl>
-  </section>
-  <section><h3>Identifiers naming rules</h3>
-    <p>Or shortly, a name in Python can start with <span class="note">letter or underscore</span>, followed by zero or more <span class="note">letters, underscores and digits</span></p>
-    <p>Note that variable names <span class="note">are case-sensitive</span></p>
-    <p>Reference: <a href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">Identifiers and keywords</a> @python docs</p>
-  </section>
-  <section><h3>Examples</h3>
-    <pre><code rel="Python" class="python">
-      user_name = 'Ada'   # valid
-      user name = 'John'  # invalid - spaces not allowed
-      1user_number = 23   # invalid - name can not start with number
-      user_number1 = 23   # valid
-      _____ = 'what?'     # valid, but not a good choice for name
-    </code></pre>
-  </section>
-  <section><h3>Naming conventions</h3>
-    <p>Each programming language have some naming conventions in order to make programs more readable</p>
-    <dl class="fa">
-      <dt>In python we use the lowercase <code>snake_case</code> convention.</dt>
-    </dl>
-    <pre><code rel="Python" class="python3">
-      user_name = 'Ada' # valid and follows the Python convention
-      userName = 'Ada'  # valid, but breaks the Python (snake_case) convention
-    </code></pre>
-  </section>
-  <section><h3>Naming Conventions</h3>
-    <dl class="fa">
-      <dt>Function names should be lowercase, with words separated by underscores as necessary to improve readability.</dt>
-      <dt>Variable names follow the same convention as function names.</dt>
-      <dt>mixedCase is allowed only in contexts where that's already the prevailing style (e.g. threading.py), to retain backwards compatibility.</dt>
-      <dt><a href="https://www.python.org/dev/peps/pep-0008/#function-and-variable-names">PEP 8 (Function and Variable Names)</a></dt>
-    </dl>
-  </section>
-  <section><h3>example</h3>
-    <pre><code rel="Python" class="python">
-      x = 99
-      print("x = ", x)
+	<section><h3>What is a variable in Python?</h3>
+		<dl class="fa">
+			<dt>A <span class="note">name</span> (identifier) for "container" (placed in RAM) in which values can be stored and retrieved.</dt>
+		</dl>
+		<a href="images/python_variables_in_RAM.png"><img src="images/python_variables_in_RAM.png"></a>
+	</section>
+	<section><h3>What is a variable in Python?</h3>
+		<dl class="fa">
+			<dt>We can assign (write in RAM) value to a variable, like this: <code>x = 5</code></dt>
+			<dt>We can use(read from RAM) the value assigned to a variable: <code>print(x)</code></dt>
+			<dt>In Python we speak about <span class="note">name binding</span>, when we assign a value to variable.</dt>
+		</dl>
+	</section>
+	<section><h3>Identifiers naming rules</h3>
+		<p>Identifiers is a common term, which denotes variables, functions, objects, classes and other names used in a programming language.</p>
+		<p>Valid identifier in Python is a combination of one or more allowed symbols:</p>
+		<dl class="fa">
+			<dt>lower-case letters (<span class="note">a to z</span>)</dt>
+			<dt>upper-case letters (<span class="note">A to Z</span>)</dt>
+			<dt>digits (<span class="note">0 to 9</span>)</dt>
+			<dt>underscore (<span class="note">_</span>)</dt>
+			<dt class="note">Identifiers can not start with number!</dt>
+		</dl>
+	</section>
+	<section><h3>Identifiers naming rules</h3>
+		<p>Or shortly, a name in Python can start with <span class="note">letter or underscore</span>, followed by zero or more <span class="note">letters, underscores and digits</span></p>
+		<p>Note that variable names <span class="note">are case-sensitive</span></p>
+		<p>Reference: <a href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">Identifiers and keywords</a> @python docs</p>
+	</section>
+	<section><h3>Examples</h3>
+		<pre><code rel="Python" class="python">
+			user_name = 'Ada'   # valid
+			user name = 'John'  # invalid - spaces not allowed
+			1user_number = 23   # invalid - name can not start with number
+			user_number1 = 23   # valid
+			_____ = 'what?'     # valid, but not a good choice for name
+		</code></pre>
+	</section>
+	<section><h3>Naming conventions</h3>
+		<p>Each programming language have some naming conventions in order to make programs more readable</p>
+		<dl class="fa">
+			<dt>In python we use the lowercase <code>snake_case</code> convention.</dt>
+		</dl>
+		<pre><code rel="Python" class="python3">
+			user_name = 'Ada' # valid and follows the Python convention
+			userName = 'Ada'  # valid, but breaks the Python (snake_case) convention
+		</code></pre>
+	</section>
+	<section><h3>Naming Conventions</h3>
+		<dl class="fa">
+			<dt>Function names should be lowercase, with words separated by underscores as necessary to improve readability.</dt>
+			<dt>Variable names follow the same convention as function names.</dt>
+			<dt>mixedCase is allowed only in contexts where that's already the prevailing style (e.g. threading.py), to retain backwards compatibility.</dt>
+			<dt><a href="https://www.python.org/dev/peps/pep-0008/#function-and-variable-names">PEP 8 (Function and Variable Names)</a></dt>
+		</dl>
+	</section>
+	<section><h3>example</h3>
+		<pre><code rel="Python" class="python">
+			x = 99
+			print("x = ", x)
 
-      first_name = "ada"
-      print("first_name = ", first_name)
+			first_name = "ada"
+			print("first_name = ", first_name)
 
-      print("first_name = ", First_name) #NameError: name 'First_name' is not defined
+			print("first_name = ", First_name) #NameError: name 'First_name' is not defined
 
 
-    </code></pre>
-  </section>
-  <section><h3>Name binding</h3>
-    <dl class="fa">
-      <dt>Name binding is the association between a name and an a value</dt>
-      <dt>We can bind a value to a name with the <code>assignment</code> operator (<code>=</code>)</dt>
-      <pre><code rel="Python" class="python">
-        # assign the value 2 to the variable named 'x':
-        >>> x = 2
+		</code></pre>
+	</section>
+	<section><h3>Name binding</h3>
+		<dl class="fa">
+			<dt>Name binding is the association between a name and an a value</dt>
+			<dt>We can bind a value to a name with the <code>assignment</code> operator (<code>=</code>)</dt>
+			<pre><code rel="Python" class="python">
+				# assign the value 2 to the variable named 'x':
+				>>> x = 2
 
-        # assign the value 4 to the variable named 'y':
-        >>> y = 2
+				# assign the value 4 to the variable named 'y':
+				>>> y = 2
 
-        # use the values assigned to the 'x' and 'y' variables:
-        print(x + y)
-      </code></pre>
-    </dl>
-    <p class="advanced">Note, that all values in Python are represented as objects</p>
-  </section>
-  <section><h3>Name binding - aliasing</h3>
-    <dl class="fa">
-      <dt>When the right-hand side of the assignment is an existing variable, Python did not create a new object, but gives that object another name, an alias.</dt>
-      <pre><code rel="Python" class="python">
-        >>> a = 1_000_000
-        >>> b = a
-        >>> id(a)
-        140418111916176
-        >>> id(b)
-        140418111916176
-      </code></pre>
-      <dt>But numbers are <span class="note">immutable</span>, i.e. we can not change their values</dt>
-      <pre><code rel="Python" class="python">
-        # in next line, Python do not change the value 1_000_000, but creates a new object '2_000_000' in memory, and binds 'a' to that object:
-        >>> a = 2_000_000
-        >>> print(a)
-        2_000_000
+				# use the values assigned to the 'x' and 'y' variables:
+				print(x + y)
+			</code></pre>
+		</dl>
+		<p class="advanced">Note, that all values in Python are represented as objects</p>
+	</section>
+	<section><h3>Name binding - aliasing</h3>
+		<dl class="fa">
+			<dt>When the right-hand side of the assignment is an existing variable, Python did not create a new object, but gives that object another name, an alias.</dt>
+			<pre><code rel="Python" class="python">
+				>>> a = 1_000_000
+				>>> b = a
+				>>> id(a)
+				140418111916176
+				>>> id(b)
+				140418111916176
+			</code></pre>
+			<dt>But numbers are <span class="note">immutable</span>, i.e. we can not change their values</dt>
+			<pre><code rel="Python" class="python">
+				# in next line, Python do not change the value 1_000_000, but creates a new object '2_000_000' in memory, and binds 'a' to that object:
+				>>> a = 2_000_000
+				>>> print(a)
+				2_000_000
 
-        # but 'b' is still bound to the object '1_000_000'
-        >>> print(b)
-        1_000_000
+				# but 'b' is still bound to the object '1_000_000'
+				>>> print(b)
+				1_000_000
 
-      </code></pre>
-    </dl>
-  </section>
-  <section><h3 class="advanced">Name Binding</h3>
-    <dl class="fa">
-      <dt>Python reuses the immutable objects instead of creating copies</dt>
-      <dd>That's true only for small immutable objects (implementation dependant, so don't rely on that)</dd>
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Name Binding</h3>
+		<dl class="fa">
+			<dt>Python reuses the immutable objects instead of creating copies</dt>
+			<dd>That's true only for small immutable objects (implementation dependant, so don't rely on that)</dd>
 
-      <pre><code rel="Python" class="python">
-        # only one object will be created
-        >>> a = 1
-        >>> b = 1
-        >>> id(a)
-        9413184
-        >>> id(b)
-        9413184
+			<pre><code rel="Python" class="python">
+				# only one object will be created
+				>>> a = 1
+				>>> b = 1
+				>>> id(a)
+				9413184
+				>>> id(b)
+				9413184
 
-        # two objects will be created
-        >>> c = 1_000_000
-        >>> d = 1_000_000
-        >>> id(c)
-        140418111214320
-        >>> id(d)
-        140418111215440
-      </code></pre>
-    </dl>
-  </section>
-  <section><h3 class="advanced">Name binding</h3>
-    <p>Depicting how Python reuses objects in memory</p>
-    <a href="images/variables_bounding.png"><img src="images/variables_bounding.png"></a>
-  </section>
-  <section><h3>Name binding</h3>
-    <pre><code rel="Python" class="python">
-      >>> a = 5
-      >>> b = 2+3
-      >>> c = b
-      >>> id(a)
-      9413312
-      >>> id(b)
-      9413312
-      >>> id(c)
-      9413312
-    </code></pre>
-    <dl class="fa">
-      <dt>Note, that in memory there is exactly one object (id: 9413312, value:5) after execution of the above code.</dt>
-      <dt>But also remember, that numbers in Python are <span class="note">immutable</span></dt>
-    </dl>
-  </section>
-  <section><h3 class="advanced">Garbage collection</h3>
-    <pre><code rel="Python" class="python">
-      >>> a = 5
-      >>> id(a)
-      9413312
+				# two objects will be created
+				>>> c = 1_000_000
+				>>> d = 1_000_000
+				>>> id(c)
+				140418111214320
+				>>> id(d)
+				140418111215440
+			</code></pre>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Name binding</h3>
+		<p>Depicting how Python reuses objects in memory</p>
+		<a href="images/variables_bounding.png"><img src="images/variables_bounding.png"></a>
+	</section>
+	<section><h3>Name binding</h3>
+		<pre><code rel="Python" class="python">
+			>>> a = 5
+			>>> b = 2+3
+			>>> c = b
+			>>> id(a)
+			9413312
+			>>> id(b)
+			9413312
+			>>> id(c)
+			9413312
+		</code></pre>
+		<dl class="fa">
+			<dt>Note, that in memory there is exactly one object (id: 9413312, value:5) after execution of the above code.</dt>
+			<dt>But also remember, that numbers in Python are <span class="note">immutable</span></dt>
+		</dl>
+	</section>
+	<section><h3 class="advanced">Garbage collection</h3>
+		<pre><code rel="Python" class="python">
+			>>> a = 5
+			>>> id(a)
+			9413312
 
-      # Now we create a new object, and bind it to 'a'
-      >>> a = 6
-      >>> id(a)
-      9413344
+			# Now we create a new object, and bind it to 'a'
+			>>> a = 6
+			>>> id(a)
+			9413344
 
-      # the object [id:9413312, value:5] will be deleted by the garbage collector, as nothing points to it
-    </code></pre>
-  </section>
+			# the object [id:9413312, value:5] will be deleted by the garbage collector, as nothing points to it
+		</code></pre>
+	</section>
 </section>
 
 <section data-min="5"><h1>Logical Expressions and Conditional Statements.</h1></section>
 <section><h2>Boolean type</h2>
-  <section><h3>What?</h3>
-    <dl class="fa">
-      <dt>Most programming languages define a Boolean type, which represents the truth values of logic and Boolean algebra (named after <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>).</dt>
-      <dt>Boolean values in Python are used mainly in the Conditional Statements and Logical Operations.</dt>
-    </dl>
-  </section>
-  <section><h3>The Boolean type</h3>
-    <dl class="fa">
-      <dt>The Boolean data type consists of only 2 values:</dt>
-      <dd><span class="note">True</span></dd>
-      <dd><span class="note">False</span></dd>
-      <dt>Note, that these are not variables names, but values like 0 and 1!</dt>
-    </dl><br><br>
-    <pre><code rel="Python" class="bash">
-      &gt;&gt;&gt; print( type(True) )
-      &lt;class 'bool'&gt;
-      &gt;&gt;&gt; print( type(False) )
-      &lt;class 'bool'&gt;
-    </code></pre>
-  </section>
-  <section><h3 class="advanced">What is True/False in Python?</h3>
-    <p>True/False values for most of the build-in objects:</p>
-    <table>
-      <tr>
-        <th>Type:</th>
-        <th>=False</th>
-        <th>=True</th>
-      </tr>
-      <tr>
-        <td>any numeric type</td>
-        <td>0 (zero)</td>
-        <td>everything else</td>
-      </tr>
-      <tr>
-        <td>string</td>
-        <td>""</td>
-        <td>any non-empty string</td>
-      </tr>
-      <tr>
-        <td>sequences and collections</td>
-        <td>empty</td>
-        <td>any non empty</td>
-      </tr>
-    </table>
-  </section>
+	<section><h3>What?</h3>
+		<dl class="fa">
+			<dt>Most programming languages define a Boolean type, which represents the truth values of logic and Boolean algebra (named after <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a>).</dt>
+			<dt>Boolean values in Python are used mainly in the Conditional Statements and Logical Operations.</dt>
+		</dl>
+	</section>
+	<section><h3>The Boolean type</h3>
+		<dl class="fa">
+			<dt>The Boolean data type consists of only 2 values:</dt>
+			<dd><span class="note">True</span></dd>
+			<dd><span class="note">False</span></dd>
+			<dt>Note, that these are not variables names, but values like 0 and 1!</dt>
+		</dl><br><br>
+		<pre><code rel="Python" class="bash">
+			&gt;&gt;&gt; print( type(True) )
+			&lt;class 'bool'&gt;
+			&gt;&gt;&gt; print( type(False) )
+			&lt;class 'bool'&gt;
+		</code></pre>
+	</section>
+	<section><h3 class="advanced">What is True/False in Python?</h3>
+		<p>True/False values for most of the build-in objects:</p>
+		<table>
+			<tr>
+				<th>Type:</th>
+				<th>=False</th>
+				<th>=True</th>
+			</tr>
+			<tr>
+				<td>any numeric type</td>
+				<td>0 (zero)</td>
+				<td>everything else</td>
+			</tr>
+			<tr>
+				<td>string</td>
+				<td>""</td>
+				<td>any non-empty string</td>
+			</tr>
+			<tr>
+				<td>sequences and collections</td>
+				<td>empty</td>
+				<td>any non empty</td>
+			</tr>
+		</table>
+	</section>
 </section>
 <section><h2>Logical (Boolean) operators</h2>
-  <section><h3></h3>
-    <table>
-      <tr>
-        <th>Operation</th><th>Result</th>
-      </tr>
-      <tr>
-        <td>x <span class="note">or</span> y</td>
-        <td>if x is false, then y, else x</td>
-      </tr>
-      <tr>
-        <td>x <span class="note">and</span> y</td>
-        <td>if x is false, then x, else y</td>
-      </tr>
-      <tr>
-        <td><span class="note">not</span> x</td>
-        <td>if x is false, then True, else False</td>
-      </tr>
-    </table>
-    <br>
-    <dl class="fa">
-      <dt><span class="note">and</span> and <span class="note">or</span> returns one of their operands. I.e. not necessary boolean type.</dt>
-      <dt><span class="note">not</span> always returns boolean value</dt>
-    </dl>
-  </section>
-  <section><h3>Examples</h3>
-    <pre><code rel="Python" class="python">
-      >>> True and False
-      False
-      >>> 0 and 1
-      0
-      >>> 0 or 1
-      1
-      >>> 1 or 0
-      1
-      >>> not 1
-      False
-      >>> not 0
-      True
+	<section><h3></h3>
+		<table>
+			<tr>
+				<th>Operation</th><th>Result</th>
+			</tr>
+			<tr>
+				<td>x <span class="note">or</span> y</td>
+				<td>if x is false, then y, else x</td>
+			</tr>
+			<tr>
+				<td>x <span class="note">and</span> y</td>
+				<td>if x is false, then x, else y</td>
+			</tr>
+			<tr>
+				<td><span class="note">not</span> x</td>
+				<td>if x is false, then True, else False</td>
+			</tr>
+		</table>
+		<br>
+		<dl class="fa">
+			<dt><span class="note">and</span> and <span class="note">or</span> returns one of their operands. I.e. not necessary boolean type.</dt>
+			<dt><span class="note">not</span> always returns boolean value</dt>
+		</dl>
+	</section>
+	<section><h3>Examples</h3>
+		<pre><code rel="Python" class="python">
+			>>> True and False
+			False
+			>>> 0 and 1
+			0
+			>>> 0 or 1
+			1
+			>>> 1 or 0
+			1
+			>>> not 1
+			False
+			>>> not 0
+			True
 
-    </code></pre>
-  </section>
+		</code></pre>
+	</section>
 </section>
 
 <section><h2>Comparison operators</h2>
-  <section><h3>intro</h3>
-    <dl class="fa">
-      <dt>With Comparison Operations we can check if 2 or more values are equal or if a value is less than other, and so on.</dt>
-      <dt>The result of a Comparison Operation is True/False</dt>
-      <dt class="note">Comparing objects of different types, except different numeric, will raise a TypeError in Python3! (Can not compare "apples" with "oranges")</dt>
-    </dl><br><br>
-    <pre><code rel="Python" class="python">
-      >>> 2 < 1
-      False
-      >>> 2 < "1"
-      ...
-      TypeError: '<' not supported between instances of 'int' and 'str
-    </code></pre>
-  </section>
-  <section><h3>the operators</h3>
-    <table border="1">
-      <colgroup>
-      <col width="32%">
-      <col width="68%">
-      </colgroup>
-      <thead valign="bottom">
-      <tr><th>Operation</th>
-      <th>Meaning</th>
-      </tr>
-      </thead>
-      <tbody valign="top">
-      <tr><td><code><span>&lt;</span></code></td>
-      <td>strictly less than</td>
-      </tr>
-      <tr><td><code><span>&lt;=</span></code></td>
-      <td>less than or equal</td>
-      </tr>
-      <tr><td><code><span>&gt;</span></code></td>
-      <td>strictly greater than</td>
-      </tr>
-      <tr><td><code><span>&gt;=</span></code></td>
-      <td>greater than or equal</td>
-      </tr>
-      <tr><td><code><span>==</span></code></td>
-      <td>equal</td>
-      </tr>
-      <tr><td><code><span>!=</span></code></td>
-      <td>not equal</td>
-      </tr>
-      <tr style="opacity: 0.7"><td><code><span>is</span></code></td>
-      <td>object identity*</td>
-      </tr>
-      <tr style="opacity: 0.7"><td><code><span>is</span> <span>not</span></code></td>
-      <td>negated object identity*</td>
-      </tr>
-      </tbody>
-    </table>
-    <p class="note">Objects identity will be discussed in the OOP part of the course.</p>
-  </section>
-  <section><h3>examples</h3>
-    <pre><code rel="Python" class="python">
-      >>> i = 5
-      >>> i < 5
-      False
-      >>> i <= 5
-      True
-      >>> 9 < 1000
-      True
-      >>> "9" < "1000"
-      False
-    </code></pre>
-    <p class="note">Note, the last example: <code>"9" < "1000"</code>, the result is False, because strings are compared lexicographically.</p>
-  </section>
-  <section><h3>lexicographical comparison</h3>
-      <dl class="fa">
-        <dt>Symbols are compared by their position (code point) according to the character code table used.</dt>
-        <dt>First the first two items are compared, and if they differ this determines the outcome of the comparison.If they are equal, the next two items are compared, and so on, until either sequence is exhausted.</dt>
-      </dl>
-  </section>
-  <section><h3>So, why  "9" < "1000" returns False?</h3>
-      <p>If we use the <a href="https://ascii.cl/">ASCII Codes Table</a>, we see that the ASCII code point for "9" is 57, and for "1" - 49.</p>
-      <p>So, Python compares <code>57 < 49</code> and as the result is False it returns False for the whole expression</p>
-      <p class="advanced">You can get the Unicode code point for a one-character string using the built-in <code><a href="https://docs.python.org/3/library/functions.html?highlight=ord#ord">ord()</a></code> function</p>
-  </section>
-  <section><h3 class="advanced">Comparison operator Chaining</h3>
-    <dl class="fa">
-      <dt>Comparison operators in Python can be chained, instead of combining them with logical 'and'</dt>
-    </dl>
-    <pre><code rel="Python" class="python3">
-      x = 5
+	<section><h3>intro</h3>
+		<dl class="fa">
+			<dt>With Comparison Operations we can check if 2 or more values are equal or if a value is less than other, and so on.</dt>
+			<dt>The result of a Comparison Operation is True/False</dt>
+			<dt class="note">Comparing objects of different types, except different numeric, will raise a TypeError in Python3! (Can not compare "apples" with "oranges")</dt>
+		</dl><br><br>
+		<pre><code rel="Python" class="python">
+			>>> 2 < 1
+			False
+			>>> 2 < "1"
+			...
+			TypeError: '<' not supported between instances of 'int' and 'str
+		</code></pre>
+	</section>
+	<section><h3>the operators</h3>
+		<table border="1">
+			<colgroup>
+			<col width="32%">
+			<col width="68%">
+			</colgroup>
+			<thead valign="bottom">
+			<tr><th>Operation</th>
+			<th>Meaning</th>
+			</tr>
+			</thead>
+			<tbody valign="top">
+			<tr><td><code><span>&lt;</span></code></td>
+			<td>strictly less than</td>
+			</tr>
+			<tr><td><code><span>&lt;=</span></code></td>
+			<td>less than or equal</td>
+			</tr>
+			<tr><td><code><span>&gt;</span></code></td>
+			<td>strictly greater than</td>
+			</tr>
+			<tr><td><code><span>&gt;=</span></code></td>
+			<td>greater than or equal</td>
+			</tr>
+			<tr><td><code><span>==</span></code></td>
+			<td>equal</td>
+			</tr>
+			<tr><td><code><span>!=</span></code></td>
+			<td>not equal</td>
+			</tr>
+			<tr style="opacity: 0.7"><td><code><span>is</span></code></td>
+			<td>object identity*</td>
+			</tr>
+			<tr style="opacity: 0.7"><td><code><span>is</span> <span>not</span></code></td>
+			<td>negated object identity*</td>
+			</tr>
+			</tbody>
+		</table>
+		<p class="note">Objects identity will be discussed in the OOP part of the course.</p>
+	</section>
+	<section><h3>examples</h3>
+		<pre><code rel="Python" class="python">
+			>>> i = 5
+			>>> i < 5
+			False
+			>>> i <= 5
+			True
+			>>> 9 < 1000
+			True
+			>>> "9" < "1000"
+			False
+		</code></pre>
+		<p class="note">Note, the last example: <code>"9" < "1000"</code>, the result is False, because strings are compared lexicographically.</p>
+	</section>
+	<section><h3>lexicographical comparison</h3>
+			<dl class="fa">
+				<dt>Symbols are compared by their position (code point) according to the character code table used.</dt>
+				<dt>First the first two items are compared, and if they differ this determines the outcome of the comparison.If they are equal, the next two items are compared, and so on, until either sequence is exhausted.</dt>
+			</dl>
+	</section>
+	<section><h3>So, why  "9" < "1000" returns False?</h3>
+			<p>If we use the <a href="https://ascii.cl/">ASCII Codes Table</a>, we see that the ASCII code point for "9" is 57, and for "1" - 49.</p>
+			<p>So, Python compares <code>57 < 49</code> and as the result is False it returns False for the whole expression</p>
+			<p class="advanced">You can get the Unicode code point for a one-character string using the built-in <code><a href="https://docs.python.org/3/library/functions.html?highlight=ord#ord">ord()</a></code> function</p>
+	</section>
+	<section><h3 class="advanced">Comparison operator Chaining</h3>
+		<dl class="fa">
+			<dt>Comparison operators in Python can be chained, instead of combining them with logical 'and'</dt>
+		</dl>
+		<pre><code rel="Python" class="python3">
+			x = 5
 
-      # equivalent of: 0&lt;x and x&lt;10:
-      print(0&lt;x&lt;10)
-    </code></pre>
-  </section>
+			# equivalent of: 0&lt;x and x&lt;10:
+			print(0&lt;x&lt;10)
+		</code></pre>
+	</section>
 </section>
 
 <section><h2>Control Flow Statements</h2>
-  <section><h3>What?</h3>
-    <dl class="fa">
-      <dt>The Control Flow statements allows our program to react in one way, if some <span class="note">condition</span> is True, or in another way, if it's False.</dt>
-    </dl>
-  </section>
-  <section><h3>Normal Control Flow</h3>
-    <p>Statements are executed one after another, as written in code.</p>
-    <a href="images/NormalControlFlow.png"><img src="images/NormalControlFlow.png"></a>
-  </section>
+	<section><h3>What?</h3>
+		<dl class="fa">
+			<dt>The Control Flow statements allows our program to react in one way, if some <span class="note">condition</span> is True, or in another way, if it's False.</dt>
+		</dl>
+	</section>
+	<section><h3>Normal Control Flow</h3>
+		<p>Statements are executed one after another, as written in code.</p>
+		<a href="images/NormalControlFlow.png"><img src="images/NormalControlFlow.png"></a>
+	</section>
 </section>
 
 <section><h2><code class="note">if</code> statement</h2>
-  <section><h3>Syntax</h3>
-    <a href="images/ifFlow.png"><img src="images/ifFlow.png"></a>
-    <dl class="fa">
-      <dt><span class="note">Condition</span> can be any expression, which could be evaluated to <span class="note">True/False</span></dt>
-    </dl> <br><br>
-    <pre><code rel="Syntax" class="shell">
-      if condition :
-        block 1
-    </code></pre>
-    <p class="note">In Python, to encompass the statements which forms a block, you do not need to put any braces, but each statement have to be indented with <span class="note">the same amount of spaces/tabs</span>!</p>
-  </section>
-  <section><h3>example</h3>
-    <pre><code rel="Python" class="python">
-      x = 42
-      if ( x % 2 == 0):
-          print("{} is an even number!".format(x))
-    </code></pre>
-  </section>
-  <section><h3>example - align matters</h3>
-    <pre><code rel="Python" class="python">
-      if False :
-        print("Statement1")
-        print("Statement2")
-      print("Statement3")
-    </code></pre>
-    <dl class="fa">
-      <dt>Statement1 and Statement2 forms a block, which will be executed, <span class="note">only if the condition is true</span>. This is not the case in example above, that's why only Statement3 will be executed.</dt>
-    </dl>
-  </section>
+	<section><h3>Syntax</h3>
+		<a href="images/ifFlow.png"><img src="images/ifFlow.png"></a>
+		<dl class="fa">
+			<dt><span class="note">Condition</span> can be any expression, which could be evaluated to <span class="note">True/False</span></dt>
+		</dl> <br><br>
+		<pre><code rel="Syntax" class="shell">
+			if condition :
+				block 1
+		</code></pre>
+		<p class="note">In Python, to encompass the statements which forms a block, you do not need to put any braces, but each statement have to be indented with <span class="note">the same amount of spaces/tabs</span>!</p>
+	</section>
+	<section><h3>example</h3>
+		<pre><code rel="Python" class="python">
+			x = 42
+			if ( x % 2 == 0):
+					print("{} is an even number!".format(x))
+		</code></pre>
+	</section>
+	<section><h3>example - align matters</h3>
+		<pre><code rel="Python" class="python">
+			if False :
+				print("Statement1")
+				print("Statement2")
+			print("Statement3")
+		</code></pre>
+		<dl class="fa">
+			<dt>Statement1 and Statement2 forms a block, which will be executed, <span class="note">only if the condition is true</span>. This is not the case in example above, that's why only Statement3 will be executed.</dt>
+		</dl>
+	</section>
 </section>
 
 <section><h2><code class="note">if - else</code> statement</h2>
-  <section><h3>Syntax</h3>
-    <pre><code rel="Syntax" class="shell">
-      if condition :
-        block 1
-      else :
-        block 2
-    </code></pre>
-  </section>
-  <section><h3>Flow</h3>
-    <a href="images/if-elseFlow.png"><img src="images/if-elseFlow.png"></a>
-  </section>
-  <section><h3>example - even/odd number</h3>
-    <pre><code rel="Python" class="python">
-      x = 41
-      if (x % 2 == 0):
-        print("{} is an EVEN number!".format(x))
-      else:
-        print("{} is an ODD number!".format(x))
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      41 is an ODD number!
-    </code></pre>
-  </section>
-  <section><h3>example - hello in BG</h3>
-    <pre><code rel="Python" class="python">
-      user_lang = "bg"
-      if user_lang == "bg":
-          print("Здравейте")
-      else:
-          print("Hello")
-      print("-" * 20)
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      Здравейте
-      --------------------
-    </code></pre>
-  </section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="shell">
+			if condition :
+				block 1
+			else :
+				block 2
+		</code></pre>
+	</section>
+	<section><h3>Flow</h3>
+		<a href="images/if-elseFlow.png"><img src="images/if-elseFlow.png"></a>
+	</section>
+	<section><h3>example - even/odd number</h3>
+		<pre><code rel="Python" class="python">
+			x = 41
+			if (x % 2 == 0):
+				print("{} is an EVEN number!".format(x))
+			else:
+				print("{} is an ODD number!".format(x))
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			41 is an ODD number!
+		</code></pre>
+	</section>
+	<section><h3>example - hello in BG</h3>
+		<pre><code rel="Python" class="python">
+			user_lang = "bg"
+			if user_lang == "bg":
+					print("Здравейте")
+			else:
+					print("Hello")
+			print("-" * 20)
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			Здравейте
+			--------------------
+		</code></pre>
+	</section>
 </section>
 
 <section><h2><code class="note">if - elif - else</code> statement</h2>
-  <section><h3>Syntax</h3>
-    <pre><code rel="Syntax" class="shell">
-      if c1 :
-        block 1
-      elif c2:
-        block 2
-      else:
-        block 3
-    </code></pre>
-    <dl class="fa">
-        <dt><span class="note">We can have more than one elif statement</span>, as shown in next examples!</dt>
-      </dl>
-  </section>
-  <section><h3>Flow</h3>
-    <a href="images/if-elif-elseFlow.png"><img src="images/if-elif-elseFlow.png"></a>
-  </section>
-  <section><h3>example - multinational hello</h3>
-    <pre><code rel="Python" class="python">
-      user_lang = "it"
-      if user_lang == "bg":
-          print("Здравейте")
-      elif user_lang == "it":
-          print("Ciao")
-      elif user_lang == "en":
-          print("Hello")
-      else:
-          print("I do not speak your language!")
-      print("-" * 20)
-    </code></pre>
-  </section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="shell">
+			if c1 :
+				block 1
+			elif c2:
+				block 2
+			else:
+				block 3
+		</code></pre>
+		<dl class="fa">
+				<dt><span class="note">We can have more than one elif statement</span>, as shown in next examples!</dt>
+			</dl>
+	</section>
+	<section><h3>Flow</h3>
+		<a href="images/if-elif-elseFlow.png"><img src="images/if-elif-elseFlow.png"></a>
+	</section>
+	<section><h3>example - multinational hello</h3>
+		<pre><code rel="Python" class="python">
+			user_lang = "it"
+			if user_lang == "bg":
+					print("Здравейте")
+			elif user_lang == "it":
+					print("Ciao")
+			elif user_lang == "en":
+					print("Hello")
+			else:
+					print("I do not speak your language!")
+			print("-" * 20)
+		</code></pre>
+	</section>
 </section>
 
 <!-- <section><h1>Exercises</h1>
-  <section id="hw_guess_the_number" style="font-size: 0.8em"><h3>Task: guess_the_number.py</h3>
-    <dl class="fa">
-      <dt>Write a simple Python program, implementing the "Guess the number" game, following the rules:</dt>
-      <dd>The program will "think" of a number using the <code>random module</code>, as shown in code shown in next slide.</dd>
-      <dt>You have to implement now only the first user move:</dt>
-      <dd>Prompt the user for his/her guess</dd>
-      <dd>If the user guess is equal to the machine number => print out a congratulation message!</dd>
-      <dd>If the user guess is less than the machine number => print out "your guess is less than my number. Try again!"</dd>
-      <dd>If the user guess is greater than the machine number => print out "your guess is greater than my number. Try again!"</dd>
-    </dl>
-  </section>
-  <section style="font-size: 1.2em"><h3>How to generate "machine_number"</h3>
-    <pre><code rel="Python" class="python">
-      from random import randint
-      machine_number = randint(1,10)
+	<section id="hw_guess_the_number" style="font-size: 0.8em"><h3>Task: guess_the_number.py</h3>
+		<dl class="fa">
+			<dt>Write a simple Python program, implementing the "Guess the number" game, following the rules:</dt>
+			<dd>The program will "think" of a number using the <code>random module</code>, as shown in code shown in next slide.</dd>
+			<dt>You have to implement now only the first user move:</dt>
+			<dd>Prompt the user for his/her guess</dd>
+			<dd>If the user guess is equal to the machine number => print out a congratulation message!</dd>
+			<dd>If the user guess is less than the machine number => print out "your guess is less than my number. Try again!"</dd>
+			<dd>If the user guess is greater than the machine number => print out "your guess is greater than my number. Try again!"</dd>
+		</dl>
+	</section>
+	<section style="font-size: 1.2em"><h3>How to generate "machine_number"</h3>
+		<pre><code rel="Python" class="python">
+			from random import randint
+			machine_number = randint(1,10)
 
-      print("machine_number={}".format(machine_number))
+			print("machine_number={}".format(machine_number))
 
-      ### your code goes bellow:
+			### your code goes bellow:
 
-    </code></pre>
-  </section>
+		</code></pre>
+	</section>
 </section>
  -->
 <section data-min="5"><h1>Loops in Python</h1></section>
 <section><h2>What are <span class="note">loops (cycles)</span></h2>
-  <section>
-    <dl class="fa">
-      <dt>Loops are control statements which allows a block of code to be executed <span class="note">multiple</span> times.</dt>
-      <dt>This repetition of a code can be fixed number of times (<span class="note">for loop</span>) or while some <span class="note">condition</span> is fulfilled (<span class="note">while loop</span>).</dt>
-      <dt>Each execution of the code, during the loop, is called an <span class="note">iteration</span>!</dt>
-    </dl>
-  </section>
+	<section>
+		<dl class="fa">
+			<dt>Loops are control statements which allows a block of code to be executed <span class="note">multiple</span> times.</dt>
+			<dt>This repetition of a code can be fixed number of times (<span class="note">for loop</span>) or while some <span class="note">condition</span> is fulfilled (<span class="note">while loop</span>).</dt>
+			<dt>Each execution of the code, during the loop, is called an <span class="note">iteration</span>!</dt>
+		</dl>
+	</section>
 </section>
 
 <section><h1><code>while</code> loop</h1></section>
 <section><h2><code>while</code> loop</h2>
-  <section><h3>Syntax</h3>
-    <pre><code rel="Syntax" class="python" data-noescape>
-      while <i>condition</i> <b>:</b>
-        <i>block</i>
-    </code></pre>
-    <dl class="fa">
-      <dt>The block will be executed <b>while</b> the <b>condition is True</b>!</dt>
-      <dt class="note">Inside the block we have to change the variable used in condition to prevent an endless loop. Or we can use <code>break</code> statement (discussed further)</dt>
-    </dl>
-  </section>
-  <section><h3>Flow</h3>
-    <a href="images/WhileFlow.png"><img src="images/WhileFlow.png"></a>
-  </section>
-  <section><h3>Simple example</h3>
-    <pre><code rel="Python" class="python">
-      i = 1
-      while i<=5 :
-        print(i)
-        i += 1
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      1
-      2
-      3
-      4
-      5
-    </code></pre>
-    <p class="note">This is just a simple example. For fixed numbers of times loops, it is better to user <code>for</code> with <code>range</code> loop, which will be discussed next</p>
-  </section>
-  <section><h3>Example: endless loop (find the problem)</h3>
-    <p class="note">If you run next code, your Python will run an endless loop. Use <kbd>CTRL+C</kbd> or <kbd>CTRL+Z</kbd> to stop it</p>
-    <p>If you're running a Jupyter server - you'll have to stop the server.</p>
-    <pre><code rel="JS" class="js">
-      # print the numbers from 10 to 1:
-      i = 10
-      while i>=1 :
-        print(i)
-        i = 1
-    </code></pre>
-  </section>
-  <section><h3>Example - proper use case of while</h3>
-    <p class="note"><code>While</code> loop is suitable, when we do not know in advance the number of iterations needed</p>
-    <pre><code rel="Python" class="python">
-      # ask user to enter a name (string), until it contains at least 3 symbols
-      # the len function on string returns the number of symbols in a string
-      user_name = input("Enter a name, please: ")
-      user_name_length = len(user_name)
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="python" data-noescape>
+			while <i>condition</i> <b>:</b>
+				<i>block</i>
+		</code></pre>
+		<dl class="fa">
+			<dt>The block will be executed <b>while</b> the <b>condition is True</b>!</dt>
+			<dt class="note">Inside the block we have to change the variable used in condition to prevent an endless loop. Or we can use <code>break</code> statement (discussed further)</dt>
+		</dl>
+	</section>
+	<section><h3>Flow</h3>
+		<a href="images/WhileFlow.png"><img src="images/WhileFlow.png"></a>
+	</section>
+	<section><h3>Simple example</h3>
+		<pre><code rel="Python" class="python">
+			i = 1
+			while i<=5 :
+				print(i)
+				i += 1
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			1
+			2
+			3
+			4
+			5
+		</code></pre>
+		<p class="note">This is just a simple example. For fixed numbers of times loops, it is better to user <code>for</code> with <code>range</code> loop, which will be discussed next</p>
+	</section>
+	<section><h3>Example: endless loop (find the problem)</h3>
+		<p class="note">If you run next code, your Python will run an endless loop. Use <kbd>CTRL+C</kbd> or <kbd>CTRL+Z</kbd> to stop it</p>
+		<p>If you're running a Jupyter server - you'll have to stop the server.</p>
+		<pre><code rel="JS" class="js">
+			# print the numbers from 10 to 1:
+			i = 10
+			while i>=1 :
+				print(i)
+				i = 1
+		</code></pre>
+	</section>
+	<section><h3>Example - proper use case of while</h3>
+		<p class="note"><code>While</code> loop is suitable, when we do not know in advance the number of iterations needed</p>
+		<pre><code rel="Python" class="python">
+			# ask user to enter a name (string), until it contains at least 3 symbols
+			# the len function on string returns the number of symbols in a string
+			user_name = input("Enter a name, please: ")
+			user_name_length = len(user_name)
 
-      while user_name_length < 3:
-        user_name = input("Enter a name (at least 3 symbols): ")
-        user_name_length = len(user_name)
+			while user_name_length < 3:
+				user_name = input("Enter a name (at least 3 symbols): ")
+				user_name_length = len(user_name)
 
-      print("Thank you, {}!".format(user_name))
-    </code></pre>
-  </section>
-  <section><h3>Example: sum all numbers in [1..100]</h3>
-    <pre><code rel="Python" class="python">
-      i = 1
-      sum = 0
-      while i <= 100:
-        sum += i
-        i += 1
-      print("sum = ", sum)
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      sum =  5050
-    </code></pre>
-    <p>Same task is better to be implemented with <code>for</code> loop!</p>
-  </section>
-  <section><h3>Task: sum even numbers in [1..100]</h3>
-    <dl class="fa">
-      <dt>Modify the previous example, but calculate the sum <span class="note">only of the even numbers</span> in the given interval [1..100]</dt>
-    </dl>
-    <pre><code rel="Output" class="shell">
-      sum =  2550
-    </code></pre>
-  </section>
+			print("Thank you, {}!".format(user_name))
+		</code></pre>
+	</section>
+	<section><h3>Example: sum all numbers in [1..100]</h3>
+		<pre><code rel="Python" class="python">
+			i = 1
+			sum = 0
+			while i <= 100:
+				sum += i
+				i += 1
+			print("sum = ", sum)
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			sum =  5050
+		</code></pre>
+		<p>Same task is better to be implemented with <code>for</code> loop!</p>
+	</section>
+	<section><h3>Task: sum even numbers in [1..100]</h3>
+		<dl class="fa">
+			<dt>Modify the previous example, but calculate the sum <span class="note">only of the even numbers</span> in the given interval [1..100]</dt>
+		</dl>
+		<pre><code rel="Output" class="shell">
+			sum =  2550
+		</code></pre>
+	</section>
 </section>
 
 <section><h1><code>for</code> loop</h1></section>
 <section><h2><code>for</code> loop</h2>
-  <section><h3>Syntax</h3>
-    <pre><code rel="Syntax" class="python" data-noescape>
-      for <i>item</i> in <i>sequence</i> <b>:</b>
-        #do something with item
-    </code></pre>
-    <dl class="fa">
-      <dt>Python <code>for</code> statement is different than the "C-based" <code>for</code> loops in other popular languages (C#, Java, PHP, JavaScript)</dt>
-      <dt class="note">In Python, <code>for</code> statement iterates over the items of any sequence.</dt>
-      <dd>This is common to <code>foreach</code> loop concept in above-mentioned languages </dd>
-    </dl>
-  </section>
-  <section><h3>Flow</h3>
-    <a href="images/ForFlow.png"><img src="images/ForFlow.png"></a>
-  </section>
-  <section><h3>Simple example 1</h3>
-    <p>Iterate over symbols in string:</p>
-    <pre><code rel="Python" class="python">
-      for s in "ada":
-        print(s.capitalize())
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      A
-      D
-      A
-    </code></pre>
-  </section>
-  <section><h3>Simple example 2</h3>
-    <p>Iterate over list of numbers:</p>
-    <pre><code rel="Python" class="python">
-      for num in [1,2,3,4]:
-        print(num)
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      1
-      2
-      3
-      4
-    </code></pre>
-  </section>
-  <section><h3 class="advanced">Nested for loops</h3>
-    <pre><code rel="Python" class="python">
-      for i in [1,2,3]:
-        for j in "abv":
-          print(j)
-        print("\n") #prints new line
-    </code></pre>
-    <dl class="fa">
-      <dt class="note">More examples and real-world usage of the <code>for</code> statement will be shown in Sequence data types theme!</dt>
-    </dl>
-  </section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="python" data-noescape>
+			for <i>item</i> in <i>sequence</i> <b>:</b>
+				#do something with item
+		</code></pre>
+		<dl class="fa">
+			<dt>Python <code>for</code> statement is different than the "C-based" <code>for</code> loops in other popular languages (C#, Java, PHP, JavaScript)</dt>
+			<dt class="note">In Python, <code>for</code> statement iterates over the items of any sequence.</dt>
+			<dd>This is common to <code>foreach</code> loop concept in above-mentioned languages </dd>
+		</dl>
+	</section>
+	<section><h3>Flow</h3>
+		<a href="images/ForFlow.png"><img src="images/ForFlow.png"></a>
+	</section>
+	<section><h3>Simple example 1</h3>
+		<p>Iterate over symbols in string:</p>
+		<pre><code rel="Python" class="python">
+			for s in "ada":
+				print(s.capitalize())
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			A
+			D
+			A
+		</code></pre>
+	</section>
+	<section><h3>Simple example 2</h3>
+		<p>Iterate over list of numbers:</p>
+		<pre><code rel="Python" class="python">
+			for num in [1,2,3,4]:
+				print(num)
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			1
+			2
+			3
+			4
+		</code></pre>
+	</section>
+	<section><h3 class="advanced">Nested for loops</h3>
+		<pre><code rel="Python" class="python">
+			for i in [1,2,3]:
+				for j in "abv":
+					print(j)
+				print("\n") #prints new line
+		</code></pre>
+		<dl class="fa">
+			<dt class="note">More examples and real-world usage of the <code>for</code> statement will be shown in Sequence data types theme!</dt>
+		</dl>
+	</section>
 </section>
 
 <section><h1 class="advanced"><code>break</code> statement</h1></section>
 <section><h2 class="advanced"><code>break</code> statement</h2>
-  <section><h3>Syntax in while loop</h3>
-    <pre><code rel="Syntax" class="python" data-noescape>
-      while <i>condition</i><b>:</b>
-        <i>block 1</i>
-        if <i>break_cond</i><b>:</b>
-          break  # loop is terminated, block 2 is skipped
-        <i>block 2</i>
-    </code></pre>
-  </section>
-  <section><h3>Syntax in for loop</h3>
-    <pre><code rel="Syntax" class="python" data-noescape>
-      for <i>item</i> in <i>sequence</i> <b>:</b>
-        <i>block 1</i>
-        if <i>break_cond</i><b>:</b>
-          break  # loop is terminated, block 2 is skipped
-        <i>block 2</i>
-    </code></pre>
-  </section>
-  <section><h3>Flow</h3>
-    <a href="images/WhileBreakFlow.png"><img src="images/WhileBreakFlow.png"></a>
-  </section>
-  <section><h3>Example - Output letters in a string, until 'i' letter is reached</h3>
-    <pre><code rel="Python" class="python">
-      str = "alibaba"
-      for s in str:
-          if s == "i": break
-          print(s)
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      a
-      l
-    </code></pre>
-  </section>
-  <section><h3><code>do-while</code> emulations</h3>
-    <p><span class="note">Python did not have <code>do-while</code> loop, as in other languages</span> (reason: <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a>)</p>
-    <p>General structure of a do-while loop:</p>
-    <pre><code rel="Python" class="python">
-      do {
+	<section><h3>Syntax in while loop</h3>
+		<pre><code rel="Syntax" class="python" data-noescape>
+			while <i>condition</i><b>:</b>
+				<i>block 1</i>
+				if <i>break_cond</i><b>:</b>
+					break  # loop is terminated, block 2 is skipped
+				<i>block 2</i>
+		</code></pre>
+	</section>
+	<section><h3>Syntax in for loop</h3>
+		<pre><code rel="Syntax" class="python" data-noescape>
+			for <i>item</i> in <i>sequence</i> <b>:</b>
+				<i>block 1</i>
+				if <i>break_cond</i><b>:</b>
+					break  # loop is terminated, block 2 is skipped
+				<i>block 2</i>
+		</code></pre>
+	</section>
+	<section><h3>Flow</h3>
+		<a href="images/WhileBreakFlow.png"><img src="images/WhileBreakFlow.png"></a>
+	</section>
+	<section><h3>Example - Output letters in a string, until 'i' letter is reached</h3>
+		<pre><code rel="Python" class="python">
+			str = "alibaba"
+			for s in str:
+					if s == "i": break
+					print(s)
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			a
+			l
+		</code></pre>
+	</section>
+	<section><h3><code>do-while</code> emulations</h3>
+		<p><span class="note">Python did not have <code>do-while</code> loop, as in other languages</span> (reason: <a href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a>)</p>
+		<p>General structure of a do-while loop:</p>
+		<pre><code rel="Python" class="python">
+			do {
 
-        loop block
+				loop block
 
-      } while (condition);
-    </code></pre>
-  </section>
-  <section>
-    <p>But it can be easily emulated if needed</p>
-    <pre><code rel="Python - pseudo code" class="python">
-      while True:
-        # loop block
+			} while (condition);
+		</code></pre>
+	</section>
+	<section>
+		<p>But it can be easily emulated if needed</p>
+		<pre><code rel="Python - pseudo code" class="python">
+			while True:
+				# loop block
 
-        if (condition): break
-    </code></pre>
-  </section>
-  <section><h3>Example - <code>do-while</code> emulation with <code>break</code></h3>
-    <pre><code rel="Python" class="python">
-      # ask user to enter a name (string), until it contains at least 3 symbols
-      while True:
-        user_name = input("Enter a name (at least 3 symbols): ")
-        user_name_length = len(user_name)
+				if (condition): break
+		</code></pre>
+	</section>
+	<section><h3>Example - <code>do-while</code> emulation with <code>break</code></h3>
+		<pre><code rel="Python" class="python">
+			# ask user to enter a name (string), until it contains at least 3 symbols
+			while True:
+				user_name = input("Enter a name (at least 3 symbols): ")
+				user_name_length = len(user_name)
 
-        if user_name_length > 3: break
+				if user_name_length > 3: break
 
-      print("Thank you, {}!".format(user_name))
-    </code></pre>
-  </section>
-  <!-- <section><h3>Example - <code>do-while</code> emulation without <code>break</code></h3>
-    <pre><code rel="Python" class="python">
-      # ask user to enter a name (string), until it contains at least 3 symbols
-      user_name = input("Enter a name, please: ")
-      user_name_length = len(user_name)
+			print("Thank you, {}!".format(user_name))
+		</code></pre>
+	</section>
+	<!-- <section><h3>Example - <code>do-while</code> emulation without <code>break</code></h3>
+		<pre><code rel="Python" class="python">
+			# ask user to enter a name (string), until it contains at least 3 symbols
+			user_name = input("Enter a name, please: ")
+			user_name_length = len(user_name)
 
-      while user_name_length < 3:
-        user_name = input("Enter a name (at least 3 symbols): ")
-        user_name_length = len(user_name)
+			while user_name_length < 3:
+				user_name = input("Enter a name (at least 3 symbols): ")
+				user_name_length = len(user_name)
 
-      print("Thank you, {}!".format(user_name))
-    </code></pre>
-    <p class="note">Can you imagine how the code would look like, if the "do" block was more than 1 line long?</p>
-  </section> -->
-  <section><h3>switch-case statement emulation</h3>
-    <dl class="fa">
-      <dt>If you need a kind of "switch-case" functionality, you can do it with multiple <code>elif - break</code> blocks</dt>
-    </dl>
-    <pre><code rel="JS" class="js">
-      # print program menu:
-      print("Select an action:")
-      print("1. Action 1")
-      print("2. Action 3")
-      print("3. Action 3")
+			print("Thank you, {}!".format(user_name))
+		</code></pre>
+		<p class="note">Can you imagine how the code would look like, if the "do" block was more than 1 line long?</p>
+	</section> -->
+	<section><h3>switch-case statement emulation</h3>
+		<dl class="fa">
+			<dt>If you need a kind of "switch-case" functionality, you can do it with multiple <code>elif - break</code> blocks</dt>
+		</dl>
+		<pre><code rel="JS" class="js">
+			# print program menu:
+			print("Select an action:")
+			print("1. Action 1")
+			print("2. Action 3")
+			print("3. Action 3")
 
-      while True:
-        user_choice = int(input("Enter a number [0-4]: "))
+			while True:
+				user_choice = int(input("Enter a number [0-4]: "))
 
-        if user_choice == 1:
-          print("Actin 1 fired!")
-          break
-        elif user_choice == 2:
-          print("Actin 2 fired!")
-          break
-        elif user_choice == 3:
-          print("Actin 3 fired!")
-          break
-        else:
-          pass
-    </code></pre>
-    <p>Another way is to use Python dictionaries, which will be discussed further.</p>
-  </section>
-  <section><h3>Task: prompt user to enter at least 3 symbols long user name</h3>
-    <dl class="fa">
-      <dt>Implement a program, which will asks the user for a user name with at least 3 symbols in it.</dt>
-      <dt>Bellow is the desired output</dt>
-    </dl>
-    <pre><code rel="Output" class="shell">
-      Enter your user name (at least 3 symbols):
-      *** At least 3 symbols, please! Try again.
+				if user_choice == 1:
+					print("Actin 1 fired!")
+					break
+				elif user_choice == 2:
+					print("Actin 2 fired!")
+					break
+				elif user_choice == 3:
+					print("Actin 3 fired!")
+					break
+				else:
+					pass
+		</code></pre>
+		<p>Another way is to use Python dictionaries, which will be discussed further.</p>
+	</section>
+	<section><h3>Task: prompt user to enter at least 3 symbols long user name</h3>
+		<dl class="fa">
+			<dt>Implement a program, which will asks the user for a user name with at least 3 symbols in it.</dt>
+			<dt>Bellow is the desired output</dt>
+		</dl>
+		<pre><code rel="Output" class="shell">
+			Enter your user name (at least 3 symbols):
+			*** At least 3 symbols, please! Try again.
 
-      Enter your user name (at least 3 symbols): ad
-      *** At least 3 symbols, please! Try again.
+			Enter your user name (at least 3 symbols): ad
+			*** At least 3 symbols, please! Try again.
 
-      Enter your user name (at least 3 symbols): ada
-      Nice, your user_name is:  ada
-    </code></pre>
-  </section>
+			Enter your user name (at least 3 symbols): ada
+			Nice, your user_name is:  ada
+		</code></pre>
+	</section>
 </section>
 
 <section><h1 class="advanced"><code>continue</code> statement</h1></section>
 <section><h2 class="advanced"><code>continue</code> statement</h2>
-  <section>
-    <dl class="fa">
-      <dt>Returns the control to the beginning of the loop.</dt>
-      <dd>code <b>after</b> continue will be skipped.</dd>
-      <dt>Usually, continue statement is dependent on some condition.</dt>
-    </dl>
-  </section>
-  <section><h3>Syntax in while loop</h3>
-    <pre><code rel="Syntax" class="python" data-noescape>
-      while <i>condition</i><b>:</b>
-        <i>block 1</i>
-        if <i>continue_cond</i><b>:</b>
-          continue  # go to while condition
-        <i>block 2</i>
-    </code></pre>
-  </section>
-  <section><h3>Flow</h3>
-    <a href="images/WhileContinueFlow.png"><img src="images/WhileContinueFlow.png"></a>
-  </section>
-  <section><h3>Example -  print all numbers in [1..5], but skip 3</h3>
-    <pre><code rel="Python" class="python">
-      for i in [1,2,3,4,5]:
-        if i == 3:
-           continue
-        print(i)
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      1
-      2
-      4
-      5
-    </code></pre>
-  </section>
-  <section><h3>Example - print symbols in a string, excluding vowels: </h3>
-    <pre><code rel="Python" class="python">
-      str = "alabala"
-      for s in str:
-        if s in ["a", "e", "i", "o", "u", "y"]:
-            continue
-        print(s)
-    </code></pre>
-    <pre><code rel="Output" class="shell">
-      l
-      b
-      l
-    </code></pre>
-  </section>
+	<section>
+		<dl class="fa">
+			<dt>Returns the control to the beginning of the loop.</dt>
+			<dd>code <b>after</b> continue will be skipped.</dd>
+			<dt>Usually, continue statement is dependent on some condition.</dt>
+		</dl>
+	</section>
+	<section><h3>Syntax in while loop</h3>
+		<pre><code rel="Syntax" class="python" data-noescape>
+			while <i>condition</i><b>:</b>
+				<i>block 1</i>
+				if <i>continue_cond</i><b>:</b>
+					continue  # go to while condition
+				<i>block 2</i>
+		</code></pre>
+	</section>
+	<section><h3>Flow</h3>
+		<a href="images/WhileContinueFlow.png"><img src="images/WhileContinueFlow.png"></a>
+	</section>
+	<section><h3>Example -  print all numbers in [1..5], but skip 3</h3>
+		<pre><code rel="Python" class="python">
+			for i in [1,2,3,4,5]:
+				if i == 3:
+					 continue
+				print(i)
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			1
+			2
+			4
+			5
+		</code></pre>
+	</section>
+	<section><h3>Example - print symbols in a string, excluding vowels: </h3>
+		<pre><code rel="Python" class="python">
+			str = "alabala"
+			for s in str:
+				if s in ["a", "e", "i", "o", "u", "y"]:
+						continue
+				print(s)
+		</code></pre>
+		<pre><code rel="Output" class="shell">
+			l
+			b
+			l
+		</code></pre>
+	</section>
 </section>
 
 <!-- <section><h1>Exercises</h1></section>
 <section><h2>HW</h2>
-  <section><h3>"Guess the number" - full version</h3>
-    <dl class="fa">
-      <dt>Write the full version of the "Guess the number" game, implementing the same rules as given in <a href="#hw_guess_the_number">Guess the number game - the beginning</a>, but giving the user the chance to try more than once.</dt>
-      <dt>The user now will have 5 tries to guess.</dt>
-      <dt>If he/she could not manage to guess the number for 5 tries, the game stops, with a message:<br>"You lost! My number was X"</dt>
-      <dd>where X is the machine number</dd>
-    </dl>
-  </section>
-  <section><h3>"Guess the number" - solutions</h3>
-    <dl class="fa">
-      <dt>a solution with while loop</dt>
-      <dd><a href="Task_and_HW/guess_the_number_while_loop.py">guess_the_number_while_loop.py</a></dd>
-      <dt>a solution with for loop</dt>
-      <dd><a href="Task_and_HW/guess_the_number_for_loop.py">guess_the_number_for_loop.py</a></dd>
-    </dl>
-  </section>
+	<section><h3>"Guess the number" - full version</h3>
+		<dl class="fa">
+			<dt>Write the full version of the "Guess the number" game, implementing the same rules as given in <a href="#hw_guess_the_number">Guess the number game - the beginning</a>, but giving the user the chance to try more than once.</dt>
+			<dt>The user now will have 5 tries to guess.</dt>
+			<dt>If he/she could not manage to guess the number for 5 tries, the game stops, with a message:<br>"You lost! My number was X"</dt>
+			<dd>where X is the machine number</dd>
+		</dl>
+	</section>
+	<section><h3>"Guess the number" - solutions</h3>
+		<dl class="fa">
+			<dt>a solution with while loop</dt>
+			<dd><a href="Task_and_HW/guess_the_number_while_loop.py">guess_the_number_while_loop.py</a></dd>
+			<dt>a solution with for loop</dt>
+			<dd><a href="Task_and_HW/guess_the_number_for_loop.py">guess_the_number_for_loop.py</a></dd>
+		</dl>
+	</section>
 </section> -->
 
 <section><h1>Sequence Data Types - Overview</h1></section>
 <section><h2>Sequence Data Types - Overview</h2>
-  <section><h3>What is a Sequence?</h3>
-    <p>A sequence in Python is a container, storing <span class="note">ordered collection</span>  of objects.</p>
-    <a href="images/animalSequence.png"><img src="images/animalSequence.png"></a>
-  </section>
-  <section><h3>What is a Sequence?</h3>
-    <dl class="fa">
-      <dt>The position number of an item in a sequence is called <span class="note">index</span>.</dt>
-      <dt class="note">Indexes starts counting from 0.</dt>
-      <dt>All sequence data type in Python supports common sequence operations.</dt>
-      <dd><code>length, indexing, slicing, concatenation, <br> repetition, membership test, min, max, count, index</code>.</dd>
-      <dt>Each sequence data type has also own methods for performing specific operations.</dt>
-    </dl>
-  </section>
-  <section><h3>What is a Sequence?</h3>
-    <a href="images/sequenceStructure.png"><img src="images/sequenceStructure.png"></a>
-  </section>
-  <section><h3>What is a Sequence? - examples</h3>
-    <pre><code rel="Python" class="python">
-      # list:
-      fruits = ["apple", "banana", "strawberry", "banana", "orange"]
+	<section><h3>What is a Sequence?</h3>
+		<p>A sequence in Python is a container, storing <span class="note">ordered collection</span>  of objects.</p>
+		<a href="images/animalSequence.png"><img src="images/animalSequence.png"></a>
+	</section>
+	<section><h3>What is a Sequence?</h3>
+		<dl class="fa">
+			<dt>The position number of an item in a sequence is called <span class="note">index</span>.</dt>
+			<dt class="note">Indexes starts counting from 0.</dt>
+			<dt>All sequence data type in Python supports common sequence operations.</dt>
+			<dd><code>length, indexing, slicing, concatenation, <br> repetition, membership test, min, max, count, index</code>.</dd>
+			<dt>Each sequence data type has also own methods for performing specific operations.</dt>
+		</dl>
+	</section>
+	<section><h3>What is a Sequence?</h3>
+		<a href="images/sequenceStructure.png"><img src="images/sequenceStructure.png"></a>
+	</section>
+	<section><h3>What is a Sequence? - examples</h3>
+		<pre><code rel="Python" class="python">
+			# list:
+			fruits = ["apple", "banana", "strawberry", "banana", "orange"]
 
-      # tupple:
-      point3d = (4, 0, 3)
+			# tupple:
+			point3d = (4, 0, 3)
 
-      # range:
-      digits = range(0,10)
+			# range:
+			digits = range(0,10)
 
-      # string:
-      user_name="ada byron"
-    </code></pre>
-  </section>
-  <section>
-    <dl class="fa">
-      <dt>The Sequence Data Types in Python are:</dt>
-      <dd>Lists.</dd>
-      <dd>Tuple.</dd>
-      <dd>Range.</dd>
-      <dt><i>Strings are also considered as a sequence</i>.</dt>
-    </dl>
-  </section>
+			# string:
+			user_name="ada byron"
+		</code></pre>
+	</section>
+	<section>
+		<dl class="fa">
+			<dt>The Sequence Data Types in Python are:</dt>
+			<dd>Lists.</dd>
+			<dd>Tuple.</dd>
+			<dd>Range.</dd>
+			<dt><i>Strings are also considered as a sequence</i>.</dt>
+		</dl>
+	</section>
 </section>
 
 
 <section><h1>Lists</h1></section>
 <section><h2>Lists</h2>
-  <section><h3>What is a List?</h3>
-    <dl class="fa">
-      <dt>A list is a <span class="note">mutable</span> (i.e. changeable) sequence of objects.</dt>
-      <dd class="note">we can add or delete elements to the list.</dd>
-      <dt>Lists, being mutable sequence, can grow or shrink.</dt>
-      <dt>There is no restriction of the type of the objects being in a list.</dt>
-      <dt>The objects in a list can repeat many times.</dt>
-      <dt>Lists are general-purpose data structure.</dt>
-    </dl>
-  </section>
-  <section><h3>Create list by literal</h3>
-    <dl class="fa">
-      <dt>A List literal is denoted by a <span class="note">square brackets</span></dt>
-      <dt>Items in the list are separated by <span class="note">comma</span></dt>
-    </dl>
-    <pre><code rel="Python" class="python">
-      ### create empty list:
-      empty_list = []
+	<section><h3>What is a List?</h3>
+		<dl class="fa">
+			<dt>A list is a <span class="note">mutable</span> (i.e. changeable) sequence of objects.</dt>
+			<dd class="note">we can add or delete elements to the list.</dd>
+			<dt>Lists, being mutable sequence, can grow or shrink.</dt>
+			<dt>There is no restriction of the type of the objects being in a list.</dt>
+			<dt>The objects in a list can repeat many times.</dt>
+			<dt>Lists are general-purpose data structure.</dt>
+		</dl>
+	</section>
+	<section><h3>Create list by literal</h3>
+		<dl class="fa">
+			<dt>A List literal is denoted by a <span class="note">square brackets</span></dt>
+			<dt>Items in the list are separated by <span class="note">comma</span></dt>
+		</dl>
+		<pre><code rel="Python" class="python">
+			### create empty list:
+			empty_list = []
 
-      ### create list of numbers:
-      users = [1,2,3,4,5]
+			### create list of numbers:
+			users = [1,2,3,4,5]
 
-      ### create list of lists
-      matrix = [
-        [1,2,3],
-        [4,5,6],
-        [7,8,9]
-      ]
-    </code></pre>
-  </section>
-  <section><h3>Retrieve item from list</h3>
-    <pre><code rel="Syntax" class="shell" data-noescape>
-      var_name = list_name<b>[</b><i>index</i><b>]</b>
-    </code></pre>
-    <pre><code rel="Python" class="python">
-      ### create list:
-      fruits = ["apple", "banana", "strawberry", "banana", "orange"]
+			### create list of lists
+			matrix = [
+				[1,2,3],
+				[4,5,6],
+				[7,8,9]
+			]
+		</code></pre>
+	</section>
+	<section><h3>Retrieve item from list</h3>
+		<pre><code rel="Syntax" class="shell" data-noescape>
+			var_name = list_name<b>[</b><i>index</i><b>]</b>
+		</code></pre>
+		<pre><code rel="Python" class="python">
+			### create list:
+			fruits = ["apple", "banana", "strawberry", "banana", "orange"]
 
-      ### retrieve the first item in the list:
-      item1 = fruits[0]
-      # apple
+			### retrieve the first item in the list:
+			item1 = fruits[0]
+			# apple
 
-      ### retrieve third item in the list.
-      item3 = fruits[2]
-      # strawberry
+			### retrieve third item in the list.
+			item3 = fruits[2]
+			# strawberry
 
-      # retrieve last item in the list:
-      itemN = fruits[-1]
-      # orange
-    </code></pre>
-    <p style="font-size: 0.8em">We will discuss more indexing operation in <a href="#commonSequenceOperations">Common Sequence Operations</a>.</p>
-  </section>
-  <section><h3>Change list item</h3>
-    <pre><code rel="Syntax" class="shell" data-noescape>
-      list_name<b>[</b><i>index</i><b>] = <i>value</i></b>
-    </code></pre>
-    <pre><code rel="Python" class="python">
-      ### create list:
-      fruits = ["apple", "banana", "strawberry"]
+			# retrieve last item in the list:
+			itemN = fruits[-1]
+			# orange
+		</code></pre>
+		<p style="font-size: 0.8em">We will discuss more indexing operation in <a href="#commonSequenceOperations">Common Sequence Operations</a>.</p>
+	</section>
+	<section><h3>Change list item</h3>
+		<pre><code rel="Syntax" class="shell" data-noescape>
+			list_name<b>[</b><i>index</i><b>] = <i>value</i></b>
+		</code></pre>
+		<pre><code rel="Python" class="python">
+			### create list:
+			fruits = ["apple", "banana", "strawberry"]
 
-      ### Change second list item
-      fruits[1] = "plum"
-      print( fruits )
-      # ['apple', 'plum', 'strawberry']
+			### Change second list item
+			fruits[1] = "plum"
+			print( fruits )
+			# ['apple', 'plum', 'strawberry']
 
-      ### Change last list item
-      fruits[-1] = "orange"
-      print( fruits )
-      # ['apple', 'plum', 'orange']
-    </code></pre>
-  </section>
+			### Change last list item
+			fruits[-1] = "orange"
+			print( fruits )
+			# ['apple', 'plum', 'orange']
+		</code></pre>
+	</section>
 </section>
 
 <section><h1 class="advanced">Tuples</h1></section>
 <section><h2 class="advanced">Tuples</h2>
-  <section><h3>What is a Tuple?</h3>
-    <dl class="fa">
-      <dt>A tuple is <span class="note">immutable</span> (i.e. not changeble) sequence of data.</dt>
-      <dd class="note">once created a tuple can not be changed! No grow or shrink can happens.</dd>
-      <dt>Useful for fixed data.</dt>
-      <dt>Tuples are faster than lists and consumes less memory, but they are not general-purpose.</dt>
-    </dl>
-  </section>
-  <section><h3>Create tuple from literal</h3>
-    <dl class="fa">
-      <dt>Tuple literal is denoted by <span class="note">parentheses</span></dt>
-      <dt>Items in the tuple are separated by <span class="note">comma</span></dt>
-    </dl>
-    <pre><code rel="Python" class="python">
-      ### create empty tuple:
-      empty = ()
-      print( empty )
-      # ()
+	<section><h3>What is a Tuple?</h3>
+		<dl class="fa">
+			<dt>A tuple is <span class="note">immutable</span> (i.e. not changeble) sequence of data.</dt>
+			<dd class="note">once created a tuple can not be changed! No grow or shrink can happens.</dd>
+			<dt>Useful for fixed data.</dt>
+			<dt>Tuples are faster than lists and consumes less memory, but they are not general-purpose.</dt>
+		</dl>
+	</section>
+	<section><h3>Create tuple from literal</h3>
+		<dl class="fa">
+			<dt>Tuple literal is denoted by <span class="note">parentheses</span></dt>
+			<dt>Items in the tuple are separated by <span class="note">comma</span></dt>
+		</dl>
+		<pre><code rel="Python" class="python">
+			### create empty tuple:
+			empty = ()
+			print( empty )
+			# ()
 
-      ### create tuple with one element - note the trailing comma!
-      #   if you write t = (99), t will be an integer, not tuple
-      t = (99,)
-      print(t)
-      # (99,)
+			### create tuple with one element - note the trailing comma!
+			#   if you write t = (99), t will be an integer, not tuple
+			t = (99,)
+			print(t)
+			# (99,)
 
-      ### create tuple of 3 elements:
-      point3d = (4, 0, 3)
-      print(point3d)
-      # (4, 0, 3)
-    </code></pre>
-  </section>
-  <section><h3>Retrieve item from tuple</h3>
-    <pre><code rel="Syntax" class="shell" data-noescape>
-      var_name = tupple_name<b>[</b><i>index</i><b>]</b>
-    </code></pre>
-    <pre><code rel="Python" class="python">
-      ### retrieve tuple items
-      address = ('Bulgaria', 'Sofia', 'Nezabravka str', 14)
+			### create tuple of 3 elements:
+			point3d = (4, 0, 3)
+			print(point3d)
+			# (4, 0, 3)
+		</code></pre>
+	</section>
+	<section><h3>Retrieve item from tuple</h3>
+		<pre><code rel="Syntax" class="shell" data-noescape>
+			var_name = tupple_name<b>[</b><i>index</i><b>]</b>
+		</code></pre>
+		<pre><code rel="Python" class="python">
+			### retrieve tuple items
+			address = ('Bulgaria', 'Sofia', 'Nezabravka str', 14)
 
-      country = address[0]
-      town = address[1]
-      street = address[2]
-      street_num = address[3]
-      print(country, town, street, street_num)
-      # Bulgaria Sofia Nezabravka str 14
-    </code></pre>
-  </section>
-  <section><h3>Change tuple? <strong>No Way!</strong></h3>
-    <dl class="fa">
-      <dt class="note">Tuples are immutable and can not be changed!</dt>
-    </dl>
-    <pre><code rel="Python" class="python">
-      ### change a tuple item:
-      address[0] = "France"
-      # TypeError: 'tuple' object does not support item assignment
-    </code></pre>
-  </section>
-  <section><h3>Examples</h3>
-    <pre><code rel="Python" class="python">
-      ### create tuple with 3 elements:
-      ada_birth_date = (10, "December", 1815)
+			country = address[0]
+			town = address[1]
+			street = address[2]
+			street_num = address[3]
+			print(country, town, street, street_num)
+			# Bulgaria Sofia Nezabravka str 14
+		</code></pre>
+	</section>
+	<section><h3>Change tuple? <strong>No Way!</strong></h3>
+		<dl class="fa">
+			<dt class="note">Tuples are immutable and can not be changed!</dt>
+		</dl>
+		<pre><code rel="Python" class="python">
+			### change a tuple item:
+			address[0] = "France"
+			# TypeError: 'tuple' object does not support item assignment
+		</code></pre>
+	</section>
+	<section><h3>Examples</h3>
+		<pre><code rel="Python" class="python">
+			### create tuple with 3 elements:
+			ada_birth_date = (10, "December", 1815)
 
-      # retrieve tuple elements:
-      ada_birth_day = ada_birth_date[0]
-      ada_birth_month = ada_birth_date[1]
-      ada_birth_year = ada_birth_date[2]
+			# retrieve tuple elements:
+			ada_birth_day = ada_birth_date[0]
+			ada_birth_month = ada_birth_date[1]
+			ada_birth_year = ada_birth_date[2]
 
-      print("Ada is born on {} {} in {}".format(ada_birth_month, ada_birth_day, ada_birth_year))
-      # Ada is born on December 10 in 181
-    </code></pre>
-  </section>
+			print("Ada is born on {} {} in {}".format(ada_birth_month, ada_birth_day, ada_birth_year))
+			# Ada is born on December 10 in 181
+		</code></pre>
+	</section>
 </section>
 
 <section><h1>Range Object</h1></section>
 <section><h2>Range Object</h2>
-  <section><h3>What is a Range Object?</h3>
-    <dl class="fa">
-      <dt>The range type represents an <span class="note">immutable sequence of numbers</span>.</dt>
-      <dt>It's used to generate a number sequence, limited between pre-given <b>start</b> and <b>stop</b> integer values.</dt>
-      <dt class="note">It's typical use in Python is with <code>for</code> loops.</dt>
-      <dt>Reference: <a href="https://docs.python.org/3/library/stdtypes.html#ranges">ranges @python3 docs</a></dt>
-    </dl>
-  </section>
-  <section><h3>Syntax</h3>
-    <pre><code rel="Syntax" class="shell" data-noescape>
-      range(<i>stop</i>)
-      range(<i>start</i>, <i>stop</i>[, <i>step</i>])
-    </code></pre>
-    <dl class="fa">
-      <dt><em>start</em> is optional and if omitted defaults to 0</dt>
-      <dt><em>step</em> is optional and if omitted defaults to 1.</dt>
-      <dt><em>start</em>, <em>stop</em> and <em>step</em> must be integers!</dt>
-      <dt><em>step</em> can't be 0 (or "ValueError" is raised)</dt>
-      <dt>The range of generated integers will end at <b>stop - 1</b>.</dt>
-      <dt>If the given arguments did not form a sequence, an empty sequence will be returned.</dt>
-    </dl>
-  </section>
-  <section><h3>Examples</h3>
-    <pre><code rel="Python" class="python">
-      range(0,10)
-      # generates the sequence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+	<section><h3>What is a Range Object?</h3>
+		<dl class="fa">
+			<dt>The range type represents an <span class="note">immutable sequence of numbers</span>.</dt>
+			<dt>It's used to generate a number sequence, limited between pre-given <b>start</b> and <b>stop</b> integer values.</dt>
+			<dt class="note">It's typical use in Python is with <code>for</code> loops.</dt>
+			<dt>Reference: <a href="https://docs.python.org/3/library/stdtypes.html#ranges">ranges @python3 docs</a></dt>
+		</dl>
+	</section>
+	<section><h3>Syntax</h3>
+		<pre><code rel="Syntax" class="shell" data-noescape>
+			range(<i>stop</i>)
+			range(<i>start</i>, <i>stop</i>[, <i>step</i>])
+		</code></pre>
+		<dl class="fa">
+			<dt><em>start</em> is optional and if omitted defaults to 0</dt>
+			<dt><em>step</em> is optional and if omitted defaults to 1.</dt>
+			<dt><em>start</em>, <em>stop</em> and <em>step</em> must be integers!</dt>
+			<dt><em>step</em> can't be 0 (or "ValueError" is raised)</dt>
+			<dt>The range of generated integers will end at <b>stop - 1</b>.</dt>
+			<dt>If the given arguments did not form a sequence, an empty sequence will be returned.</dt>
+		</dl>
+	</section>
+	<section><h3>Examples</h3>
+		<pre><code rel="Python" class="python">
+			range(0,10)
+			# generates the sequence: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      range(10)
-      # same as above
+			range(10)
+			# same as above
 
-      range(2, 10, 2)
-      # generates the sequence: [2, 4, 6, 8]
+			range(2, 10, 2)
+			# generates the sequence: [2, 4, 6, 8]
 
-      range(9, -1, -1)
-      # generates the sequence: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+			range(9, -1, -1)
+			# generates the sequence: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
-      range(-3, 4)
-      # generates the sequence: [-3, -2, -1, 0, 1, 2, 3]
+			range(-3, 4)
+			# generates the sequence: [-3, -2, -1, 0, 1, 2, 3]
 
-      range(9, -1, 1)
-      # incorrect sequence formulae, will return empty sequence
-    </code></pre>
-  </section>
-  <section><h3>Range in for: example 1</h3>
-    <pre><code rel="Python" class="python">
-      ### iterate from 0 up to 10, step = 1 (default)
-      for i in range(10):
-          print(i, end=" ")
-      # 0 1 2 3 4 5 6 7 8 9
-    </code></pre>
-  </section>
-  <section><h3>Range in for: example 2</h3>
-    <pre><code rel="Python" class="python">
-      ### iterate from 10 up to -1, step = -1
-      for i in range(10,-1, -1):
-          print(i, end=" ")
-      # 10 9 8 7 6 5 4 3 2 1 0
-    </code></pre>
-  </section>
-  <section><h3>Range in for: example 3</h3>
-    <pre><code rel="Python" class="python">
-      ### iterate from 2 up to 10, step = 2
-      for i in range(2, 10, 2):
-          print(i, end=" ")
-      # 2 4 6 8
-    </code></pre>
-  </section>
-  <section><h3>Range in for: example 4</h3>
-    <pre><code rel="Python" class="python">
-      ### iterate from -10 up to 0, step = 2
-      for i in range(-10, 0, 2):
-          print(i, end=" ")
-      # -10 - 8 - 6 - 4 - 2
-    </code></pre>
-  </section>
+			range(9, -1, 1)
+			# incorrect sequence formulae, will return empty sequence
+		</code></pre>
+	</section>
+	<section><h3>Range in for: example 1</h3>
+		<pre><code rel="Python" class="python">
+			### iterate from 0 up to 10, step = 1 (default)
+			for i in range(10):
+					print(i, end=" ")
+			# 0 1 2 3 4 5 6 7 8 9
+		</code></pre>
+	</section>
+	<section><h3>Range in for: example 2</h3>
+		<pre><code rel="Python" class="python">
+			### iterate from 10 up to -1, step = -1
+			for i in range(10,-1, -1):
+					print(i, end=" ")
+			# 10 9 8 7 6 5 4 3 2 1 0
+		</code></pre>
+	</section>
+	<section><h3>Range in for: example 3</h3>
+		<pre><code rel="Python" class="python">
+			### iterate from 2 up to 10, step = 2
+			for i in range(2, 10, 2):
+					print(i, end=" ")
+			# 2 4 6 8
+		</code></pre>
+	</section>
+	<section><h3>Range in for: example 4</h3>
+		<pre><code rel="Python" class="python">
+			### iterate from -10 up to 0, step = 2
+			for i in range(-10, 0, 2):
+					print(i, end=" ")
+			# -10 - 8 - 6 - 4 - 2
+		</code></pre>
+	</section>
 </section>
 
 
 <!-- <section id="hw" data-min="4"><h1>Exercises</h1></section>
 <section><h2>Task1: Task1Title</h2>
-  <section><h3>The Task</h3>
-    <dl class="fa">
-      <dt></dt>
-    </dl>
-  </section>
+	<section><h3>The Task</h3>
+		<dl class="fa">
+			<dt></dt>
+		</dl>
+	</section>
 </section>
 
 <section><h3>Submission</h3>
-  <dl class="fa">
-    <dt>PLease, prefix your filenames/archive with your name initials, before sending.</dt>
-    <dd>For instance: <b>iep_task1.py</b> or <b>iep_tasks.rar</b></dd>
-    <dt>Send files to <a href="mailto:ProgressBG.WWW.Courses@gmail.com?Subject=_machine_learning_tools_">ProgressBG.WWW.Courses@gmail.com</a></dt>
-  </dl>
+	<dl class="fa">
+		<dt>PLease, prefix your filenames/archive with your name initials, before sending.</dt>
+		<dd>For instance: <b>iep_task1.py</b> or <b>iep_tasks.rar</b></dd>
+		<dt>Send files to <a href="mailto:ProgressBG.WWW.Courses@gmail.com?Subject=_machine_learning_tools_">ProgressBG.WWW.Courses@gmail.com</a></dt>
+	</dl>
 </section> -->
 
 
-<section class="disclaimer" data-background="/Ind-MLwithPython-Slides/outfit/images/for_slides/the_end_on_sand.jpg">
-  <p>These slides are based on</p>
-  <p>customised version of </p>
-  <p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
-   <p>framework</p>
-</section>
 <!--
 ########################################################
 ##################### SLIDES END   #####################
 ########################################################
 -->
-    </div>
-  </div>
-  <!-- Custom processing -->
-  <script src="/Ind-MLwithPython-Slides/outfit/js/slides.js"></script>
-  <!-- external scripts -->
-  <script src="/Ind-MLwithPython-Slides/lib/reveal.js/lib/js/head.min.js"></script>
-  <script src="/Ind-MLwithPython-Slides/lib/reveal.js/js/reveal.js"></script>
 
-  <!-- init reveal -->
-  <script>
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    var highlightjsTabSize = '  ';
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      slideNumber: 'c/t',
-      keyboard: true,
-      history: true,
+<section class="disclaimer" data-background="/Ind-MLwithPython-Slides/outfit/images/for_slides/the_end_on_sand.jpg">
+	<p>These slides are based on</p>
+	<p>customised version of </p>
+	<p><a href="http://hakim.se/">Hakimel</a>'s <a href="http://lab.hakim.se/reveal-js">reveal.js</a></p>
+	 <p>framework</p>
+</section>
+		</div>
+	</div>
+	<!-- Custom processing -->
+	<script src="/Ind-MLwithPython-Slides/outfit/js/slides.js"></script>
+	<!-- external scripts -->
+	<script src="/Ind-MLwithPython-Slides/lib/reveal.js/lib/js/head.min.js"></script>
+	<script src="/Ind-MLwithPython-Slides/lib/reveal.js/js/reveal.js"></script>
 
-      // display control
-      // center: true,
-      // width: '100%',
-      // height: '100%',
-      // // Factor of the display size that should remain empty around the content
-      // margin: 0.1,
+	<!-- init reveal -->
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		var highlightjsTabSize = '  ';
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			slideNumber: 'c/t',
+			keyboard: true,
+			history: true,
 
-      // The "normal" size of the presentation, aspect ratio will be preserved
-      // when the presentation is scaled to fit different resolutions. Can be
-      // specified using percentage units.
-      width: 960,
-      height: 700,
+			// display control
+			// center: true,
+			// width: '100%',
+			// height: '100%',
+			// // Factor of the display size that should remain empty around the content
+			// margin: 0.1,
 
-      // Factor of the display size that should remain empty around the content
-      margin: 0.1,
+			// The "normal" size of the presentation, aspect ratio will be preserved
+			// when the presentation is scaled to fit different resolutions. Can be
+			// specified using percentage units.
+			width: 960,
+			height: 700,
 
-      // Bounds for smallest/largest possible scale to apply to content
-      minScale: 0.2,
-      maxScale: 1.5,
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
 
-      // slide transition
-      transition: 'concave', // none/fade/slide/convex/concave/zoom
-      // shift+maous click to zoom in/out element
-      zoomKey: 'ctrl',
-      // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-      // transition: Reveal.getQueryHash().transition || 'default'
-      // Optional reveal.js plugins
-      dependencies: [
-        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
-        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
-        { src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/notes/notes.js', async: true }
-      ]
-    });
-  </script>
-  <!-- linkedin badge -->
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+			// Bounds for smallest/largest possible scale to apply to content
+			minScale: 0.2,
+			maxScale: 1.5,
+
+			// slide transition
+			transition: 'concave', // none/fade/slide/convex/concave/zoom
+			// shift+maous click to zoom in/out element
+			zoomKey: 'ctrl',
+			// theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			// transition: Reveal.getQueryHash().transition || 'default'
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: '/Ind-MLwithPython-Slides/lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.configure({tabReplace: highlightjsTabSize}); hljs.initHighlightingOnLoad(); } },
+				{ src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				{ src: '/Ind-MLwithPython-Slides/lib/reveal.js/plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+	<!-- linkedin badge -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+	<!-- MathJax -->
+	<!-- <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" async src="/Ind-MLwithPython-Slides/lib/MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script> -->
 </body>
 </html>
