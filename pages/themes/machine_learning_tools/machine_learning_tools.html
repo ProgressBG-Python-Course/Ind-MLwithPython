@@ -167,19 +167,50 @@
 </section>
 
 
-<section data-min="5"><h1>Course Folder Structure</h1></section>
+<section data-min="5" id="courseFolderStructure"><h1>Course Folder Structure</h1></section>
 <section><h2>Course Folder Structure</h2>
 	<section><h3>Folder structure</h3>
 		<dl class="fa">
 			<dt>Create a <b>root folder</b> for the course: "<code>MLwithPython</code>"</dt>
 			<dt>Create next folder structure into your course root folder:</dt>
 		</dl>
-		<pre><code rel="Folders structure" class="bash">
+		<!-- <pre><code rel="Folders structure" class="bash">
 			MLwithPython/
-			├── notebooks
-			└── python_basics
+			├── homework/
+			|	# for homeworks
+			├── notebooks/
+			|	# for notebooks, written in labs
+			├── datasets/
+			|	# for datasets, used in labs
+			├── project/
+			│   ├── code/
+			|	# for code (the notebook, or python files)
+			│   ├── datasets/
+			|	# for datasets used in project
+			│   └── docs/
+			|	# for project documentation
+			├── python_basics/
+			|	# for python code in labs
+			└── .gitignore
+		</code></pre> -->
+		<pre><code rel="JS" class="bash">
+			MLwithPython/
+			├── homeworks/
+			├── labs/
+			│   ├── datasets/
+			│   ├── notebooks/
+			│   └── python_basics/
+			├── project/
+			│   ├── datasets/
+			│   ├── notebooks/
+			│   └── docs/
+			└── .gitignore
 		</code></pre>
+		<dl class="fa">
+			<dt>Create the <code>.gitignore</code> file (<span class="note">with dot infront</span>) in the main course folder, and paste that code: <a href="https://raw.githubusercontent.com/jupyter/notebook/master/.gitignore">.gitignore</a> in it</dt>
+		</dl>
 	</section>
+
 </section>
 
 <section data-min="5"><h1>Git && GitHub</h1></section>
