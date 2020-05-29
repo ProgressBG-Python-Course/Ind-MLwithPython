@@ -86,17 +86,17 @@
 	<section><h3>What?</h3>
 		<dl class="fa">
 			<dt>Feature engineering is the process of <span class="note">using domain knowledge</span> of the data to create features that make machine learning algorithms work.</dt>
-			<dt>Feature engineering turns the given input into data useful for an ML algorithm.</dt>
+			<dt>Feature engineering turns the given input attributes into data (<span class="note">features</span>) useful for an ML algorithm.</dt>
 			<dt>Feature Engineering is an art!</dt>
 		</dl>
 	</section>
 	<section><h3>Why?</h3>
 		<dl class="fa">
 			<dt>The proper features used for a task play vital role in the ML result.</dt>
-			<dt>Not always the input attributes are useful features for the task given.</dt>
+			<dt>Not always the input attributes are useful features for the task given:</dt>
 			<dd>some attributes are not relevant to the task at all</dd>
-			<dd>some attributes data are not in the proper form</dd>
-			<dd>some separate attributes are correlated. Will it be useful to combine (cross) them into one feature?</dd>
+			<dd>some attributes data are not in the proper form for given algorithm.</dd>
+			<dd>some separate attributes are correlated. Will it be useful to combine (cross) them into one feature? Or just to remove some of them?</dd>
 		</dl>
 	</section>
 	<section><h3>Why?</h3>
@@ -120,9 +120,51 @@
 	</section>
 	<section><h3>Feature Engineering process</h3>
 		<dl class="fa">
-			<dt><span class="note">Features Selection</span>: selecting the most useful features.</dt>
+			<dt><span class="note">Feature Transformation</span> - preprocessing like normalization and scaling</dt>
 			<dt><span class="note">Features Extraction</span>: combining existing features to provide more useful features.</dt>
 			<dt><span class="note">Creation of new features</span>: creation of new features, based on data.</dt>
+			<dt><span class="note">Features Selection</span>: selecting the most useful features.</dt>
+		</dl>
+	</section>
+</section>
+
+
+<section data-min="50"><h1>Feature Scaling</h1></section>
+<section><h2>Feature Scaling</h2>
+	<section><h3>Why?</h3>
+		<dl class="fa">
+			<dt>Some machine learning algorithms like linear regression, logistic regression, neural network (i.e. algorithms that use gradient descent as an optimization technique) require data to be scaled</dt>
+		</dl>
+	</section>
+	<section><h3></h3></section>
+</section>
+
+<section data-min="10"><h1>Feature transformation</h1></section>
+<section><h2>Feature transformation</h2>
+	<section><h3>Overview</h3>
+		<dl class="fa">
+			<dt><code>new_feature_set = f(old_feature_set)</code></dt>
+			<dt>Transform the original feature by some function in order to produce more meaningful feature set.</dt>
+			<dt><a href="https://scikit-learn.org/stable/modules/preprocessing.html">sklearn.preprocessing</a> module</dt>
+		</dl>
+	</section>
+	<section><h3>Presentation Notebook</h3>
+		<dl class="fa">
+			<dt><a href="https://nbviewer.jupyter.org/github/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/the_art_of_features_engineering/feature_transformation.ipynb">Feature Transformation</a> @nbviewr</dt>
+		</dl>
+	</section>
+	<!-- <section><h3>Useful functions/manipulations</h3>
+		<dl class="fa">
+			<dt><a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/Appendix/count_unique_values.ipynb">count_unique_values.ipynb</a></dt>
+			<dt><a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/Appendix/ndarray_apply_cutom_function.ipynb">ndarray_apply_cutom_function.ipynb</a></dt>
+		</dl>
+	</section> -->
+	<section><h3>Useful Readings</h3>
+		<dl class="fa">
+			<dt><a href="https://medium.com/@michaelabehsera/feature-engineering-cookbook-for-machine-learning-7bf21f0bcbae">Feature Engineering Cookbook for Machine Learning</a></dt>
+			<dt><a href="https://towardsdatascience.com/understanding-feature-engineering-part-1-continuous-numeric-data-da4e47099a7b">Understanding Feature Engineering (Part 1) - Continuous Numeric Data</a></dt>
+			<dt><a href="https://towardsdatascience.com/understanding-feature-engineering-part-2-categorical-data-f54324193e63">Understanding Feature Engineering (Part 2) - Categorical Data</a></dt>
+			<dt><a href="https://scikit-learn.org/stable/modules/preprocessing.html">Preprocessing data</a> @<a href="https://scikit-learn.org">scikit-learn.org</a></dt>
 		</dl>
 	</section>
 </section>
@@ -138,58 +180,6 @@
 </section>
 
 
-<section data-min="10"><h1>Feature transformation</h1></section>
-<section><h2>Feature transformation</h2>
-	<section><h3>Overview</h3>
-		<dl class="fa">
-			<dt><code>new_feature_set = f(old_feature_set)</code></dt>
-			<dt>Transform the original feature by some function in order to produce more meaningful feature set.</dt>
-			<dt><a href="https://scikit-learn.org/stable/modules/preprocessing.html">sklearn.preprocessing</a> module</dt>
-		</dl>
-	</section>
-	<section>
-		<dl class="fa">
-			<dt>Log Transformation</dt>
-			<dt>Feature Scaling or Normalization</dt>
-			<dt>$l^2$ Normalization</dt>
-		</dl>
-	</section>
-	<section><h3>Logarithm Function</h3>
-		<p style="font-size: 1.5em">$\log_{b} (x) = y$, if $b^y = x$</p>
-		<a href="images/log_function.png"><img src="images/log_function.png" alt="log" style="height: 70vh;"></a>
-	</section>
-	<section><h3>Min-Max Scaling</h3>
-		<p>$x̃ = x – min(x) / max(x) – min(x)$</p>
-		<dl class="fa">
-			<dt>$x$ is an individual feature value at a given data point</dt>
-			<dt>min(x) and max(x), respectively, are the minimum and maximum values of this feature over the entire dataset</dt>
-			<dt>Min-max scaling squeezes (or stretches) all feature values to be within the range of [0, 1].</dt>
-		</dl>
-	</section>
-	<section>
-		<a href="images/min_max_scaling.jpg"><img src="images/min_max_scaling.jpg"></a>
-	</section>
-	<section><h3>Examples</h3>
-		<dl class="fa">
-			<dt>The Jupyter Notebook is here: <a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/the_art_of_features_engineering/Features_transformations.ipynb">Features_transformations.ipynb</a></dt>
-		</dl>
-	</section>
-	<section><h3>Useful functions/manipulations</h3>
-		<dl class="fa">
-			<dt><a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/Appendix/count_unique_values.ipynb">count_unique_values.ipynb</a></dt>
-			<dt><a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/Appendix/ndarray_apply_cutom_function.ipynb">ndarray_apply_cutom_function.ipynb</a></dt>
-		</dl>
-	</section>
-	<section><h3>Resources</h3>
-		<dl class="fa">
-			<dt><a href="https://scikit-learn.org/stable/modules/preprocessing.html">Preprocessing data</a> @<a href="https://scikit-learn.org">scikit-learn.org</a></dt>
-			<dt><a href="https://towardsdatascience.com/understanding-feature-engineering-part-1-continuous-numeric-data-da4e47099a7b">Understanding Feature Engineering (Part 1) — Continuous Numeric Data</a></dt>
-			<dt><a href="https://towardsdatascience.com/understanding-feature-engineering-part-2-categorical-data-f54324193e63">Understanding Feature Engineering (Part 2) — Categorical Data</a></dt>
-		</dl>
-	</section>
-</section>
-
-
 <section data-min="20"><h1>Feature Engineering for Text Classification</h1></section>
 <section><h2>Feature Engineering for Text Classification</h2>
 	<section><h3>Overview</h3>
@@ -200,17 +190,13 @@
 			<dt>More complex Feature Engineering techniques include the use of Ontologies and Latent Semantic Indexing</dt>
 		</dl>
 	</section>
-	<section><h3>The Bag Of Words</h3>
+	<section><h3>The Bag Of Words Approach</h3>
 		<dl class="fa">
 			<dt>Stop-words removal</dt>
 			<dt>Stemming</dt>
 			<dt>TF/IDF normalization</dt>
 		</dl>
-	</section>
-	<section>
-		<dl class="fa">
-			<dt>You can check the example Notebook at <a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/the_art_of_features_engineering/TF_IDF.ipynb"></a></dt>
-		</dl>
+		<p><a href="https://nbviewer.jupyter.org/github/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/the_art_of_features_engineering/TF_IDF.ipynb">TF_IDF - Example Notebook</a></p>
 	</section>
 </section>
 
