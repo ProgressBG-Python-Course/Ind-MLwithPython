@@ -121,32 +121,59 @@
 	<section><h3>Feature Engineering process</h3>
 		<dl class="fa">
 			<dt><span class="note">Feature Transformation</span> - preprocessing like normalization and scaling</dt>
-			<dt><span class="note">Features Extraction</span>: combining existing features to provide more useful features.</dt>
-			<dt><span class="note">Creation of new features</span>: creation of new features, based on data.</dt>
+			<dt><span class="note">Features Extraction</span>: selecting new features from the input attributes</dt>
 			<dt><span class="note">Features Selection</span>: selecting the most useful features.</dt>
+			<dt><span class="note">Creation of new features</span>: creation of new features, based on data.</dt>
+
 		</dl>
 	</section>
 </section>
 
-
-<section data-min="50"><h1>Feature Scaling</h1></section>
-<section><h2>Feature Scaling</h2>
-	<section><h3>Why?</h3>
-		<dl class="fa">
-			<dt>Some machine learning algorithms like linear regression, logistic regression, neural network (i.e. algorithms that use gradient descent as an optimization technique) require data to be scaled</dt>
-		</dl>
-	</section>
-	<section><h3></h3></section>
-</section>
 
 <section data-min="10"><h1>Feature transformation</h1></section>
 <section><h2>Feature transformation</h2>
+	<section><h3>Why?</h3>
+		<dl class="fa">
+			<dt>Most machine-learning algorithms requires features to be numerical.</dt>
+			<dt>Some machine learning algorithms like linear regression, logistic regression, neural network (i.e. algorithms that use gradient descent as an optimization technique) require features to be scaled.</dt>
+		</dl>
+	</section>
 	<section><h3>Overview</h3>
 		<dl class="fa">
 			<dt><code>new_feature_set = f(old_feature_set)</code></dt>
 			<dt>Transform the original feature by some function in order to produce more meaningful feature set.</dt>
 			<dt><a href="https://scikit-learn.org/stable/modules/preprocessing.html">sklearn.preprocessing</a> module</dt>
 		</dl>
+	</section>
+	<section><h3>Scikit-learn Preprocessing Overview</h3>
+		<dl class="fa">
+			<dt>The sklearn.preprocessing package provides several common utility functions and transformer classes to change raw feature vectors into a representation that is more suitable for the downstream estimators.</dt>
+			<dt>The usage of Transform classes is coherent with the usage of Estimator classes</dt>
+		</dl>
+	</section>
+	<section><h3>Scikit-learn Transformers vs Estimators</h3>
+		<table>
+			<tr>
+				<th></th>
+				<th>Transformers</th>
+				<th>Estimators</th>
+			</tr>
+			<tr>
+				<th style="white-space: nowrap">Used for</th>
+				<td>Data Preprocessing</td>
+				<td>Modeling</td>
+			</tr>
+			<tr>
+				<th>Method</th>
+				<td><code>fit()</code> - calculate parameters from training data</td>
+				<td><code>fit()</code> - calculate parameters from training data</td>
+			</tr>
+			<tr>
+				<th>Method</th>
+				<td><code>transform()</code> - applied to training/test data</td>
+				<td><code>predict()</code> - applied to training/test data</td>
+			</tr>
+		</table>
 	</section>
 	<section><h3>Presentation Notebook</h3>
 		<dl class="fa">
@@ -174,9 +201,30 @@
 	<section><h3>Overview</h3>
 		<dl class="fa">
 			<dt>Feature extraction is the process of selecting new features from the input attributes.</dt>
-			<dt>Usually, this process is a reduction of input attributes into relevant for the task features.</dt>
+			<dt>Usually, this process is a reduction of input attributes into relevant for the task features.I.e. the  Feature Selection phase.</dt>
+			<dt>Feature extraction can also include combining two/more features into one.</dt>
 		</dl>
 	</section>
+</section>
+
+<section data-min="50"><h1>Feature Selection</h1></section>
+<section><h2>Feature Selection</h2>
+	<section><h3>Why?</h3>
+		<p>The benefits from reducing the numbers of features are:</p>
+		<dl class="fa">
+			<dt>Overfitting risk reduction.</dt>
+			<dt>Model accuracy improvement.</dt>
+			<dt>Speed up in training phase.</dt>
+			<dt>Improved Data Visualization and explainability of the model.</dt>
+		</dl>
+	</section>
+	<section><h3>Methods</h3>
+		<dl class="fa">
+			<dt><a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/the_art_of_features_engineering/feature_selection-low_variance_and_feature_importance-Titanic_dataset.ipynb">Feature Selection Methods: Low variance and Feature Importance</a></dt>
+			<dt><a href="https://github.com/ProgressBG-Python-Course/JupyterNotebooksExamples/blob/master/Notebooks/the_art_of_features_engineering/feature_selection-correlations-Iris_dataset.ipynb">Remove correlated features - demo on Iris Dataset</a></dt>
+		</dl>
+	</section>
+
 </section>
 
 
